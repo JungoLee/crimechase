@@ -1,0 +1,10 @@
+{
+  "elements": ["html5"],
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "doctype-style": "off",
+    "prefer-native-element": "off",
+    "no-inline-style": "warn",
+    "void-style": ["error", { "style": "selfclosing" }]
+  }
+}

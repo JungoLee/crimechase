@@ -164,7 +164,16 @@
 .dimm img {
   display: block;
 }
-
+.f-bar-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.f-bar-semibold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
 /* 공통 레이아웃 속성 */
 html,
 body {
@@ -178,6 +187,9 @@ body {
 }
 #content {
   height: 100%;
+}
+body {
+  overflow: hidden;
 }
 
 /* 아이콘 공통 속성 */

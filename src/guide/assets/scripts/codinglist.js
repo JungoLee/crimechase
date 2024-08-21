@@ -565,7 +565,8 @@ const projectPathsDev = {
   "pathGuideMailform": "guide/pages/mailform",
   "pathGuideInclude": "guide/pages/include",
   "pathPagesInclude": "pages/include",
-  "pathPagesMain": "pages/main"
+  "pathPagesMain": "pages/main",
+  "pathPagesCommon": "pages/common"
 };
 // END OF CODINGLIST PATHS DEV
 
@@ -585,7 +586,8 @@ const projectPathsBuild = {
   "pathGuideMailform": "guide/pages/mailform",
   "pathGuideInclude": "guide/pages/include",
   "pathPagesInclude": "pages/include",
-  "pathPagesMain": "pages/main"
+  "pathPagesMain": "pages/main",
+  "pathPagesCommon": "pages/common"
 };
 // END OF CODINGLIST PATHS BUILD
 
@@ -611,10 +613,11 @@ var columnDefs = [
   {
     render: function (data, type, row) {
       const { data: path, guidePathData: realPath } = transformData(data);
+      console.log(transformData(data))
       let result = `
       <div class="cl-link-group">
         <a data-preview-mode-txt="${realPath}" class="cl-link-preview ui--preview-mode" target="_blank" title="Preview 열기" role="button">P</a>
-        <a href="${realPath}" class="cl-link-url">${path}</a>
+        <a href="${path}" class="cl-link-url">${path}</a>
       </div>
       `;
       if (!data) {
@@ -657,55 +660,33 @@ var drawCallback = function (settings) {
     });
 };
 
-// 구글닥스 연동
-$("#statistics").sheetrock({
-  url: mySpreadsheet,
-  callback: makeSortable,
-});
-
-function makeSortable(error, options, response) {
-  $(options.user.target).DataTable({
-    paging: paging,
-    scrollX: scrollX,
-    searching: searching,
-    ordering: ordering,
-    info: info,
-    autoWidth: autoWidth,
-    dom: dom,
-    buttons: buttons,
-    columns: columns,
-    columnDefs: columnDefs,
-    drawCallback: drawCallback,
-  });
-  codinglistPageInfo();
-  onPreviewBtn();
-}
 
 // 로컬 CSV 데이터 연동
-// CsvToHtmlTable.init({
-//     csv_path: csv_local_path,
-//     element: 'table-container',
-//     csv_options: {separator: ',', delimiter: '"'},
-//     datatables_options: {
-//         "paging": paging,
-//         "scrollX": scrollX,
-//         "searching": searching,
-//         "ordering": ordering,
-//         "info": info,
-//         "autoWidth": autoWidth,
-//         "dom": dom,
-//         "buttons": buttons,
-//         "columns": columns,
-//         "columnDefs": columnDefs,
-//         drawCallback: function(settings) {
-//           // 기존 drawCallback 함수 호출
-//           drawCallback.call(this, settings);
-//           // 추가 작업 수행
-//           codinglistPageInfo();
-//           onPreviewBtn();
-//         }
-//     },
-// });
+CsvToHtmlTable.init({
+    csv_path: csv_local_path,
+    element: 'table-container',
+    csv_options: {separator: ',', delimiter: '"'},
+    datatables_options: {
+        "paging": paging,
+        "scrollX": scrollX,
+        "searching": searching,
+        "ordering": ordering,
+        "info": info,
+        "autoWidth": autoWidth,
+        "dom": dom,
+        "buttons": buttons,
+        "columns": columns,
+        "columnDefs": columnDefs,
+        drawCallback: function(settings) {
+          console.log(settings)
+          // 기존 drawCallback 함수 호출
+          drawCallback.call(this, settings);
+          // 추가 작업 수행
+          codinglistPageInfo();
+          onPreviewBtn();
+        }
+    },
+});
 
 // 페이지 수 정보
 var codinglistPageInfo = function () {

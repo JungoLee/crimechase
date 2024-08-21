@@ -18,11 +18,11 @@
 }
 
 .snackbar-container {
+  transform: translate3d(0, 30px, 0);
+  overflow: hidden;
   &.type02 {
     opacity: 0;
   }
-  transform: translate3d(0, 30px, 0);
-  overflow: hidden;
   .snackbar-content {
     @include rem(max-width, 500);
     background-color: rgba(0, 0, 0, 0.8);

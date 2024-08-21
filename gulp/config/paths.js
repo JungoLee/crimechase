@@ -52,6 +52,7 @@ const projectReplacePaths = {
   pathGuideInclude: getBuildPath(`guide/pages/include`, `guide/pages/include`),
   pathPagesInclude: getBuildPath(`pages/include`, `pages/include`),
   pathPagesMain: getBuildPath(`pages/main`, `pages/main`),
+  pathPagesCommon: getBuildPath(`pages/common`, `pages/common`),
   // 필요한 경로를 추가 합니다.
 };
 

@@ -1,16 +1,18 @@
 @use "../abstracts" as *;
 
 .pc-show {
-  display: block;
-}
-.pc-hide {
   display: none;
 }
 .mo-show {
-  display: block;
-}
-.mo-hide {
   display: none;
+}
+@media (max-width: 767px) {
+  .mo-show {
+    display: block;
+  }
+  .pc-show {
+    display: block;
+  }
 }
 .block {
   display: block;

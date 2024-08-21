@@ -1,122 +1,162 @@
 @use "../abstracts" as *;
-
+body {
+  background-image: url("/assets/images/youtube_dummy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .header {
+  position: fixed;
+  @include rem(top, 40);
   width: 100%;
-  // @include rem(height, 80);
-  transition: all 0.3s ease;
-  border-bottom: 1px solid $line-000000;
-  // background-color: $bg-cccccc;
-  &.on {
-    transform: translate3d(0, -110%, 0);
-    .header-inner {
-    }
-  }
+  @include rem(font-size, 15);
+  @include rem(line-height, 18);
+  color: #fff;
+  // letter-spacing: 0.1rem;
   .header-inner {
+    max-width: 1280px;
     width: 100%;
-    transition: all 0.3s ease;
-  }
-
-  // Header top
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1440px;
     margin: 0 auto;
-    @include rem(padding, 10);
-    .top-list {
-      display: flex;
-      justify-content: start;
-      li {
-        @include rem(margin, 0 5px);
-        a {
-          @include f14;
-        }
-      }
-    }
-  }
-
-  // Header content
-  .header-content {
-    position: relative;
-    width: 100%;
-  }
-
-  // Gnb
-  .gnb-wrap {
+    @include rem(padding, 0 20);
+    @include rem(height, 100);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1440px;
-    margin: 0 auto;
-    @include rem(padding, 10);
+  }
+  .header-util {
+    @include rem(width, 200);
+    height: 100%;
+    position: relative;
+    @include rem(padding-right, 115);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      @include rem(right, 35);
+      width: 100vw;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: skew(35deg);
+      backdrop-filter: blur(10px);
+      z-index: 1;
+    }
+    h1 {
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      @include rem(padding, 14 0);
+    }
+    a {
+      height: 100%;
+      display: inline-flex;
+    }
+    img {
+      height: 100%;
+    }
+  }
+  .header-nav {
+    width: calc(100% - 25rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include rem(padding-left, 115);
+    @include rem(margin-left, 50);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      @include rem(left, 35);
+      width: 100vw;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: skew(35deg);
+      backdrop-filter: blur(10px);
+      z-index: 1;
+    }
+  }
+  .gnb-area {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 
-    // logo
-    .gnb-logo {
-      .logo {
-        display: inline-block;
-        @include rem(width, 200);
-        @include rem(height, 22);
-        background: #000000 url("pathGuideImages/uxdev_logo.png") no-repeat center;
-        background-size: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        vertical-align: middle;
-        margin: 0;
-      }
+    flex: 1 0 auto;
+    & + .gnb-area {
+      flex: 0 0 auto;
+    }
+  }
+  .one-depth {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & + .one-depth {
+      @include rem(margin-left, 50);
     }
 
-    // gnb
-    .gnb-area {
-      // margin-left: auto;
-      .gnb-list {
+    a {
+      @include rem(height, 40);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: color 0.2s ease-out;
+
+      span {
         position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: calc(100% + 0.4rem);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          @include rem(height, 2);
+          background-color: $primary;
+          transform: skew(-35deg);
+          z-index: 1;
+          transition:
+            width 0.2s ease-out,
+            left 0.2s ease-out;
+        }
+      }
+      &:hover {
+        color: $primary;
+        span::before {
+          width: 100%;
+          left: 0;
+        }
+      }
+      &.btn {
+        @include rem(height, 44);
+        @include rem(font-size, 17);
+        @include rem(line-height, 20);
+      }
+    }
+    &.mo-show {
+      display: none;
+      @media (max-width: 767px) {
         display: flex;
-        .one-depth {
-          @include rem(margin, 0 30);
-          span {
-            @include f18;
-          }
-          .two-depth-list {
-            display: none;
-            position: absolute;
-            top: 18px;
-            left: 0;
-          }
-          &.on {
-            .two-depth-list {
-              display: block;
-            }
-          }
-        }
       }
     }
-
-    // User
-    .user {
-      button[class^="btn-"] {
-        display: inline-block;
-        overflow: hidden;
-        @include rem(width, 48);
-        @include rem(height, 48);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        color: transparent;
-        font-size: 1rem;
-        white-space: nowrap;
-        vertical-align: middle;
-        margin: 0;
-        &.btn-login {
-          background-image: url("pathGuideImagesIcon/ico_login.png");
-          background-size: 50%;
-        }
-        &.btn-search {
-          background-image: url("pathGuideImagesIcon/header_search.png");
-        }
-        &.btn-allmenu {
-          background-image: url("pathGuideImagesIcon/header_allmenu.png");
-        }
-      }
-    }
+  }
+  .gnb-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+@keyframes btnSkew {
+  0% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(22deg);
+  }
+  100% {
+    transform: skew(0deg);
   }
 }

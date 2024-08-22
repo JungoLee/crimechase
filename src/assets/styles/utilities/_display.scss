@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .pc-show {
-  display: none;
+  display: block;
 }
 .mo-show {
   display: none;
@@ -11,7 +11,7 @@
     display: block;
   }
   .pc-show {
-    display: block;
+    display: none;
   }
 }
 .block {

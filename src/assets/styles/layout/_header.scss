@@ -1,10 +1,4 @@
 @use "../abstracts" as *;
-body {
-  background-image: url("/assets/images/youtube_dummy.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .header {
   position: fixed;
   @include rem(top, 40);
@@ -12,10 +6,11 @@ body {
   @include rem(font-size, 15);
   @include rem(line-height, 18);
   color: #fff;
+  z-index: 200;
   // letter-spacing: 0.1rem;
   .header-inner {
-    max-width: 1280px;
-    width: 100%;
+    width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
     @include rem(padding, 0 20);
     @include rem(height, 100);
@@ -147,16 +142,5 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-  }
-}
-@keyframes btnSkew {
-  0% {
-    transform: skew(0deg);
-  }
-  50% {
-    transform: skew(22deg);
-  }
-  100% {
-    transform: skew(0deg);
   }
 }

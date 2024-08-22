@@ -31,26 +31,35 @@ html {
     font-size: calc(#{$global-font-size} + 6 * ((100vw - 375px) / 375));
   }
 }
-
+// + 기본 폰트 사이즈 ( - 면 커짐 , + 면 작아짐 , 숫자가 크면 클수록 빨리 줄어듬 ) * ( 100vw - 여기보다 ) / 여기가 크면 크게 시작
+//
 // 적용범위
 // 기준 디바이스 ~ 500px이하
 @media (min-width: 375px) and (max-width: 500px) {
   html {
-    font-size: calc(#{$global-font-size} + 20 * ((100vw - 375px) / 500));
+    font-size: calc(#{$global-font-size} + 12 * ((100vw - 550px) / 500));
   }
 }
 
 // 적용범위
 // 조건 : 500px 보다 클 경우 적용
-@media (min-width: 501px) {
+@media (min-width: 501px) and (max-width: 767px) {
   html {
-    font-size: $global-font-size + 2;
+    font-size: calc(#{$global-font-size} + 8 * ((100vw - 840px) / 767));
+  }
+}
+
+// 적용범위
+// 조건 : 500px 보다 클 경우 적용
+@media (min-width: 768px) and (max-width: 1280px) {
+  html {
+    font-size: calc(#{$global-font-size} + 8 * ((100vw - 1280px) / 1280));
   }
 }
 
 // 적용범위
 // PC 영역 - 조건 : hover 가능 (마우스, 터치패드)
-@media (min-width: 720px) and (hover: hover) and (pointer: fine) {
+@media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
   html {
     font-size: $global-font-size;
   }
@@ -101,7 +110,7 @@ video {
 }
 body {
   color: $global-font-color;
-  background-color: $global-background-color;
+  background-color: #1b1b1b;
 }
 img {
   border: 0;

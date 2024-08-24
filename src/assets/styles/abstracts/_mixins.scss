@@ -689,7 +689,7 @@ $unit-base-font-size: $global-font-size;
       pct: 0%,
       percent: 0%,
       num: 0,
-      number: 0 // percent or number,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      number: 0 // percent or number,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
     $unit
   );
@@ -764,4 +764,11 @@ $unit-base-font-size: $global-font-size;
   }
   @warn 'X and Y must be integers';
   @return false;
+}
+
+@mixin centerBox() {
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  @include rem(padding, 0 20);
 }

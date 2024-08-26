@@ -229,6 +229,9 @@
   }
   .swiper-slide .text-box {
     @include rem(height, 120);
+    .public-txt {
+      display: block;
+    }
   }
   .swiper-slide + .swiper-slide {
     @media (max-width: 767px) {
@@ -270,7 +273,6 @@
     .public-txt {
       opacity: 1;
       transform: translateY(0);
-      display: block;
     }
   }
   .progress-bar-wrapper {

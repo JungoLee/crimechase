@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+.login-join-container-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  @include rem(padding, 0 20);
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .btn {
+    @include rem(width, 500);
+    max-width: 100%;
+  }
+  [class^="ico-"] {
+    @include rem(margin-right, 14);
+    @include rem(margin-bottom, 2);
+  }
+  .login-description {
+    @include rem(margin-top, 10);
+  }
+  .primary2 {
+    @include rem(margin-top, 40);
+    @include rem(margin-bottom, 14);
+  }
+  .white {
+    @include rem(margin-bottom, 20);
+  }
+  .f-18 {
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+      @include rem(font-size, 14);
+      @include rem(line-height, 17);
+      .mo-show {
+        width: 100%;
+      }
+    }
+    .underline {
+      color: #fff;
+      @include rem(padding, 0 4);
+    }
+  }
+}

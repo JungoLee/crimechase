@@ -186,16 +186,17 @@ body {
 /* 아이콘 공통 속성 */
 // mobile, pc 공통
 [class^="ico-"] {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  transition: background 0.2s ease-out;
 }
 
 .public-txt {
   @include rem(font-size, 160);
   color: #fff;
-
+  display: inline-flex;
   @include rem(line-height, 160);
   &.type02 {
     color: transparent;
@@ -204,6 +205,11 @@ body {
   &.f-140 {
     @include rem(font-size, 140);
     @include rem(line-height, 140);
+    font-weight: regular;
+  }
+  &.f-80 {
+    @include rem(font-size, 80);
+    @include rem(line-height, 80);
     font-weight: regular;
   }
   &.f-52 {
@@ -220,11 +226,35 @@ body {
     @include rem(font-size, 24);
     @include rem(line-height, 24);
   }
+
   &.f-22 {
     @include rem(font-size, 22);
     @include rem(line-height, 22);
   }
+  &.f-20 {
+    @include rem(font-size, 20);
+    @include rem(line-height, 20);
+  }
+  &.f-18 {
+    @include rem(font-size, 18);
+    @include rem(line-height, 18);
+  }
   &.red {
     color: $primary;
   }
+}
+.motion-box {
+  display: inline-flex;
+}
+.motion-box-wrap {
+  overflow: hidden;
+  display: inline-flex;
+  * {
+    transform: translateY(100%);
+  }
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

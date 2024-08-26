@@ -53,6 +53,7 @@
         @include rem(font-size, 30);
         @include rem(line-height, 30);
         @include rem(margin-top, 10);
+        display: block;
       }
     }
     .f-bar-md {

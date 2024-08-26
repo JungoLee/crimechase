@@ -227,6 +227,9 @@
       }
     }
   }
+  .swiper-slide .text-box {
+    @include rem(height, 120);
+  }
   .swiper-slide + .swiper-slide {
     @media (max-width: 767px) {
       @include rem(margin-top, 40);

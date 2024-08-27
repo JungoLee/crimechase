@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+.error-container-page {
+  min-height: calc(100vh - 7rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    @include rem(width, 566);
+    max-width: calc(100% - 10rem);
+    max-height: calc(100vh - 10rem);
+    @media (max-width: 767px) {
+      max-width: 100%;
+      @include rem(margin-top, 100);
+    }
+  }
+  @media (max-width: 767px) {
+    min-height: calc(100vh - 17.3rem);
+  }
+}

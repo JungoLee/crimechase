@@ -56,6 +56,23 @@
       }
     }
   }
+  &.grey {
+    &::before,
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='496' height='60' viewBox='0 0 496 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30 0H496V45L466 60L0 60V15L30 0Z' fill='%23888888'/%3E%3C/svg%3E%0A");
+      transition: filter 0.2s ease-out;
+    }
+    &:hover {
+      &::before,
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='496' height='60' viewBox='0 0 496 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30 0H496V45L466 60L0 60V15L30 0Z' fill='%23888888'/%3E%3C/svg%3E%0A");
+        filter: brightness(0.5);
+      }
+      .txt {
+        color: #fff;
+      }
+    }
+  }
   &.white {
     &::before,
     &::after {

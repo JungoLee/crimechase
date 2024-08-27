@@ -103,3 +103,16 @@
     }
   }
 }
+.go-top-wrap {
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  @include rem(bottom, 20);
+  z-index: 5;
+}
+.btn-gotop {
+  position: absolute;
+  bottom: calc(100% + 2rem);
+  @include rem(right, 20);
+}

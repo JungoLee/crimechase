@@ -50,4 +50,37 @@
       @include rem(padding, 0 4);
     }
   }
+  .back-btn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include rem(width, 100);
+    @include rem(height, 100);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      margin: 0;
+    }
+    @media (max-width: 767px) {
+      @include rem(width, 60);
+      @include rem(height, 80);
+    }
+  }
+  @media (max-width: 767px) {
+    .f-80 {
+      @include rem(font-size, 50);
+      @include rem(line-height, 50);
+    }
+    .f-20 {
+      @include rem(font-size, 16);
+      @include rem(line-height, 19);
+    }
+    .btn {
+      .txt {
+        @include rem(font-size, 20);
+        @include rem(line-height, 20);
+      }
+    }
+  }
 }

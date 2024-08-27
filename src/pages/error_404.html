@@ -20,33 +20,18 @@
 
 <body>
   <div id="wrap">
+    @@include('pathPagesInclude/_header.html', {activeHome: true})
 
     <div id="container">
       <div id="content">
-        <div class="login-join-container-page center-flex">
-          <a href="" class="back-btn">
-            <i class="ico-arrow-back" aria-hidden="true"></i>
-          </a>
-          <div class="login-wrapper">
-            <div class="login-title public-txt f-80">LOG IN</div>
-            <p class="public-txt f-20 login-description f-bar-md">Log in with social you used to start the game.</p>
-            <button type="button" class="btn primary2">
-              <i class="ico-google"></i>
-              <span class="txt">Continue with Google</span>
-            </button>
-            <button type="button" class="btn white">
-              <i class="ico-apple"></i>
-              <span class="txt">Continue with Apple</span>
-            </button>
-            <p class="public-txt f-18 f-bar-md">Don't have an account?
-              <a class="underline" href="#none">Sign up</a>
-            </p>
-          </div>
+        <div class="error-container-page">
+          <img class="chip-img" src="../assets/images/error_img_404.png" alt="">
         </div>
 
       </div>
     </div>
 
+    @@include('pathPagesInclude/_footer.html')
   </div>
   <div class="dimm"></div>
   <script src="../assets/script/lib/swiper-bundle.min.js"></script>

@@ -1,0 +1,84 @@
+@use "../abstracts" as *;
+.nft-container-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include rem(padding, 0 15);
+  @include rem(padding-bottom, 160);
+  @media (max-width: 767px) {
+    @include rem(padding-bottom, 120);
+  }
+
+  .public-txt.f-22 {
+    @include rem(margin-top, 30);
+    @include rem(line-height, 26);
+    @media (max-width: 767px) {
+      @include rem(margin-top, 20);
+      @include rem(font-size, 14);
+      @include rem(font-size, 17);
+    }
+  }
+  .img-box {
+    @include rem(margin-top, 60);
+    position: relative;
+
+    @media (max-width: 767px) {
+      @include rem(margin-top, 30);
+    }
+    .more-info-box {
+      position: absolute;
+      width: calc(100% + 8rem);
+      max-width: calc(100vw - 8rem);
+      @include rem(bottom, 200);
+      left: 50%;
+      transform: translateX(-50%);
+
+      text-align: right;
+    }
+    .more-info {
+      @include rem(width, 98);
+      @include rem(height, 98);
+      display: inline-flex;
+      transform: rotate(0) scale(1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: rotate(15deg) scale(1.1);
+      }
+    }
+  }
+  .tab-container {
+    @include rem(margin-top, 60);
+    @media (max-width: 767px) {
+      @include rem(margin-top, 40);
+    }
+    .btn {
+      @include rem(margin-top, 0);
+      width: 33.3333%;
+    }
+    .tab-head {
+      @include rem(width, 370);
+      max-width: calc(100% - 4rem);
+      margin: 0 auto;
+    }
+    .tab-content {
+      @include rem(margin-top, 30);
+    }
+    & + .btn {
+      @include rem(margin-top, 60);
+    }
+    .table-container {
+      margin: 0 auto;
+      @media (max-width: 767px) {
+        margin: 0 -2rem;
+        max-width: calc(100% + 3rem);
+        @include rem(padding, 0 15);
+      }
+    }
+  }
+  .btn {
+    @include rem(margin-top, 30);
+  }
+}

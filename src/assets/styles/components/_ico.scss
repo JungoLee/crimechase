@@ -75,5 +75,10 @@
   @include rem(width, 26);
   @include rem(height, 20);
 
-  background: url("data:image/svg+xml,%3Csvg width='26' height='20' viewBox='0 0 26 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 10.75C25.4142 10.75 25.75 10.4142 25.75 10C25.75 9.58579 25.4142 9.25 25 9.25V10.75ZM2 10.75H25V9.25H2V10.75Z' fill='white'/%3E%3Cpath d='M1 10L11 19' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M11 1L1 10' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='20' viewBox='0 0 26 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 10.75C25.4142 10.75 25.75 10.4142 25.75 10C25.75 9.58579 25.4142 9.25 25 9.25V10.75ZM2 10.75H25V9.25H2V10.75Z' fill='white'/%3E%3Cpath d='M1 10L11 19' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M11 1L1 10' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+.ico-back-btn {
+  @include rem(width, 17);
+  @include rem(height, 12);
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 6.75C16.4142 6.75 16.75 6.41421 16.75 6C16.75 5.58579 16.4142 5.25 16 5.25L16 6.75ZM0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989593 6.3033 0.6967C6.01041 0.403807 5.53553 0.403807 5.24264 0.6967L0.46967 5.46967ZM16 5.25L1 5.25L1 6.75L16 6.75L16 5.25Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
 }

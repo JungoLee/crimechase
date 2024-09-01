@@ -103,6 +103,22 @@
         background-size: cover;
       }
     }
+    .login-info-wrapper {
+      position: absolute;
+      @include rem(top, 30);
+      height: auto;
+      right: 0;
+      .login-info {
+        padding: 0;
+        border: 0;
+        height: 100%;
+      }
+      .ico-profile-img {
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
   }
   .header-nav {
     width: calc(100% - 25rem);
@@ -299,5 +315,60 @@
     z-index: 1;
     opacity: 0;
     display: none;
+  }
+  .login-info-wrapper {
+    color: #fff;
+    position: relative;
+    &.mo-show {
+      display: none;
+      @media (max-width: 767px) {
+        display: inline-flex;
+      }
+    }
+  }
+  .login-info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include rem(height, 46);
+    border: 1px solid $primary;
+    @include rem(padding, 0 48 0 20);
+    @include rem(border-radius, 23);
+    position: relative;
+    .ico-profile-img {
+      @include rem(width, 30);
+      @include rem(height, 30);
+      @include rem(background-size, 30);
+      position: absolute;
+      @include rem(top, 7);
+      @include rem(right, 7);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .logout-btn-box {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    transform: translateY(10px);
+    display: none;
+    opacity: 0;
+    .logout-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include rem(height, 46);
+      @include rem(width, 108);
+      @include rem(border-radius, 10);
+      @include rem(font-size, 15);
+      background-color: #000;
+      color: #fff;
+      box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .id {
+    color: #fff;
+    @include rem(font-size, 15);
   }
 }

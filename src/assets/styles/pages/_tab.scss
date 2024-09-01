@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+.tab-container {
+  max-width: 100%;
+  .tab-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: linear-gradient(154deg, rgb(27, 27, 27) 0%, rgb(27, 27, 27) 50%, rgba(27, 27, 27, 0) 50%);
+      @include rem(width, 30);
+      @include rem(height, 15);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      background-image: linear-gradient(333deg, rgb(27, 27, 27) 0%, rgb(27, 27, 27) 50%, rgba(27, 27, 27, 0) 50%);
+      @include rem(width, 30);
+      @include rem(height, 15);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &::after {
+    }
+    .tab-btn {
+      flex: 1;
+      background-color: #888;
+      @include rem(height, 60);
+      @include rem(font-size, 20);
+      transition: background-color 0.2s ease-out;
+      &:hover {
+        background-color: #924a4c;
+      }
+      &.active {
+        background-color: $primary;
+      }
+      & + .tab-btn {
+        @include rem(margin-left, 2);
+      }
+      &::after {
+        content: none;
+      }
+      &::before {
+        content: none;
+      }
+
+      &:first-child {
+        &::after {
+          content: none;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        &::before {
+          content: none;
+        }
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

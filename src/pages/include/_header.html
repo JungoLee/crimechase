@@ -13,10 +13,25 @@
         </a>
       </h1>
       <!-- 로그인 버튼 -->
+      @@if(!this.isLogin){
       <a href="#none" class="btn-login mo-show">
         <i class="ico-login" aria-hidden="true"></i>
         <span class="hide-txt">로그인</span>
       </a>
+      }
+      @@if(this.isLogin){
+      <div class="login-info-wrapper mo-show">
+        <button type="button" class="login-info mo-show">
+          <i class="ico-profile-img" aria-hidden="true"
+            style="background-image:url('../assets/images/login_profile_img.png')"></i>
+          <span class="hide-txt">로그아웃 하기</span>
+        </button>
+        <div class="logout-btn-box">
+          <a href="" class="logout-btn">Logout</a>
+        </div>
+      </div>
+      }
+
     </div>
     <div class="header-nav">
 
@@ -50,12 +65,31 @@
             <span>LOG IN</span>
           </a>
         </li>
+        @@if(!this.isLogin){
         <li class="one-depth pc-show">
           <a href="" class="btn">
             <span class="txt">GET START</span>
           </a>
         </li>
+        }
+        @@if(this.isLogin){
+        <li class="one-depth pc-show">
+          <div class="login-info-wrapper">
+            <button type="button" class="login-info mo-show">
+              <span class="id f-bar-md">hello01@gmail.com</span>
+              <i class="ico-profile-img" aria-hidden="true"
+                style="background-image:url('../assets/images/login_profile_img.png')"></i>
+              <span class="hide-txt">로그아웃 하기</span>
+            </button>
+            <div class="logout-btn-box">
+              <a href="" class="logout-btn">Logout</a>
+            </div>
+          </div>
+        </li>
+        }
+
       </ul>
+
       <button type="button" class="close-btn">
         <i class="ico-close" aria-hidden="true"></i>
         <span class="hide-txt">close</span>

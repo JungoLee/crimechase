@@ -56,6 +56,10 @@
             limited NFT won't be reissued and offers powerful in-game benefits.<br>Get your Legendary now!</p>
           <div class="img-box">
             <img src="../assets/images/nft_img01.jpg" alt="">
+            <div class="draw-box">
+              <video src="../assets/images/draw_event.mp4" class="draw-video"></video>
+            </div>
+
             <div class="more-info-box">
               <a href="" class="more-info">
                 <img src="../assets/images/more_info_btn.png" alt="">
@@ -63,9 +67,10 @@
             </div>
 
           </div>
-          <button type="button" class="btn">
+          <button type="button" class="btn get-draw">
             <span class="txt">Badge Draw (Ticket : 3)</span>
           </button>
+
         </div>
 
       </div>
@@ -77,7 +82,49 @@
   <script src="../assets/script/lib/swiper-bundle.min.js"></script>
   <script src="../assets/script/lib/gsap.js"></script>
   <script src="../assets/script/common.js"></script>
+  <script>
+    const draw = setFn.draw({
+      onEnded() {
+        // 비디오 끝날때
 
+        dialog.open({
+          massage: "Unique Gauntlet",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvAFuVBkRtaJspZf6mhJjdYe3zw1fBGmCq_Eigx9hpgDISrNv6dgO6st_WVeIZjVptyU&usqp=CAU"
+        });
+
+      }
+    })
+    const dialog = setFn.dialog({
+      cancelText: false,
+      confirmText: 'GET',
+      img: true,
+      confirm() {
+        console.log("get")
+        draw.end()
+      },
+      onClose() {
+        draw.end()
+      }
+    });
+
+    document.querySelector('.get-draw').addEventListener('click', () => {
+      const { paused } = draw.play()
+      // 서버시간 으로 할때 예시
+      // if (paused) {
+      //   setTimeout(() => {
+      //     dialog.open({
+      //       massage: "Rare Gun ",
+      //       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9nu7n0E08-6IWTwb9DV6B2sCAjrEBNUTlA&s"
+      //     });
+      //   }, 3000)
+      // }
+
+
+    })
+
+
+
+  </script>
 </body>
 
 </html>

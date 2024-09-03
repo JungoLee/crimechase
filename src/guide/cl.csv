@@ -7,6 +7,4 @@ no,카테고리명,Depth 1,Depth 2,Depth 3,Depth 4,Depth 5,화면경로,담당�
 5,메인,NFT,,,,,/pages/nft.html,,,,
 5,메인,NFT_상세,,,,,/pages/nft_detail.html,,,,
 6,메인,커뮤니티,,,,,/pages/community.html,,,,
-7,메인,마이페이지,,,,,/pages/mypage.html,,,,
-8,메인,팝업,,,,,/pages/popup.html,,,,
-,,,,,,,,,,,
+7,메인,마이페이지,,,,,/pages/myasset.html,,,,

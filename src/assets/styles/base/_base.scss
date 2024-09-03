@@ -266,6 +266,9 @@ body {
       @include rem(margin, 0 8);
     }
   }
+  &.ml-30 {
+    @include rem(margin-left, 30);
+  }
 }
 .motion-box {
   display: inline-flex;

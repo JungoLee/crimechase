@@ -58,4 +58,10 @@
       }
     }
   }
+  .img-box {
+    @include rem(margin-top, 60);
+    img {
+      width: 100%;
+    }
+  }
 }

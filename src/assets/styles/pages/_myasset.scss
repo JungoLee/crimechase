@@ -1,0 +1,503 @@
+@use "../abstracts" as *;
+.myasset-container-page {
+  min-height: calc(100vh - 71rem);
+  @include rem(padding, 100 0 160);
+  @media (max-width: 767px) {
+    @include rem(padding, 110 0 120);
+  }
+  &.mo-pt-60 {
+    @include rem(padding-top, 60);
+  }
+  .inventory-wrap {
+    @include centerBox;
+    position: relative;
+  }
+  .inventory-top {
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: 767px) {
+      position: relative;
+      width: 100%;
+    }
+    .tab-head {
+      flex: 0 0 34rem;
+      @media (max-width: 767px) {
+        flex: 1;
+      }
+    }
+    .inventory-address {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      @include rem(padding-left, 40);
+      align-items: flex-end;
+      @media (max-width: 767px) {
+        width: 100%;
+        position: absolute;
+        justify-content: center;
+        bottom: calc(100% + 3rem);
+        @include rem(padding, 0 28);
+      }
+    }
+    .left-box {
+      display: flex;
+      align-items: flex-start;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      .id-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media (max-width: 767px) {
+          width: calc(100% - 3.5rem);
+        }
+      }
+      p {
+        @include rem(font-size, 17);
+        font-family: "barlow";
+        @include rem(line-height, 20);
+        color: #fff;
+        @include ellipsis;
+        @include rem(width, 260);
+        text-overflow: ellipsis;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+        &.aptos {
+          @include rem(margin-top, 5);
+        }
+      }
+    }
+    .copy-btn {
+      @include rem(margin-left, 15);
+      @include rem(margin-top, 2);
+      @media (max-width: 767px) {
+        @include rem(width, 16);
+        @include rem(height, 16);
+      }
+    }
+  }
+  .inventory-detail {
+    @include rem(margin-top, 30);
+    @include rem(height, 426);
+    @media (max-width: 767px) {
+      @include rem(margin, 30 -20);
+      overflow: auto;
+      position: relative;
+      height: auto;
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 113%;
+      }
+    }
+    .lists {
+      width: 100%;
+      height: 100%;
+      @include rem(padding, 15);
+      background-color: #888;
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 767px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: auto;
+        &:-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+    .list {
+      width: calc(14.27% - 3rem);
+      height: calc(50% - 3rem);
+      @include rem(margin, 15);
+      position: relative;
+      @media (max-width: 767px) {
+        width: calc(50% - 3rem);
+      }
+      &:nth-child(even) {
+        @media (max-width: 767px) {
+          .tooltip-detail {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+    .item-box {
+      overflow: hidden;
+
+      @include rem(border-radius, 10);
+      width: 100%;
+      height: 100%;
+      background-color: #444;
+
+      img {
+        @include rem(width, 100%);
+        @include rem(height, 100%);
+        object-fit: cover;
+        object-position: center;
+        border: 0;
+      }
+    }
+    .tooltip-area {
+      position: absolute;
+      @include rem(top, 8);
+      @include rem(right, 8);
+    }
+    .tooltip-btn {
+      @include rem(width, 22);
+      @include rem(height, 22);
+      @include rem(border-radius, 11);
+      background-color: #83a0ff;
+      border: 2px solid #1b1b1b;
+      &.type02 {
+        background-color: #ff6767;
+      }
+    }
+    .tooltip-detail {
+      position: absolute;
+      display: none;
+      top: calc(100% + 0.5rem);
+      left: -1rem;
+      z-index: 2;
+      display: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      @media (max-width: 767px) {
+        @include rem(left, -50);
+      }
+    }
+    .tooltip-lists {
+      @include rem(padding, 0 18);
+      background-color: #000;
+      box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.25);
+      @include rem(border-radius, 10);
+
+      button {
+        color: #fff;
+        @include rem(font-size, 15);
+        @include rem(line-height, 15);
+        white-space: nowrap;
+        font-family: "barlow";
+        @include rem(padding, 14 0);
+      }
+      .tooltip-list + .tooltip-list {
+        border-top: 1px solid #444;
+      }
+    }
+  }
+  .my-info-btn {
+    position: absolute;
+    top: 0;
+    display: block;
+    @include rem(right, 20);
+    @media (max-width: 767px) {
+      position: relative;
+      @include rem(margin, 60 auto 0);
+    }
+  }
+  .my-back-btn {
+    margin: 0 auto;
+    display: block;
+    @include rem(margin-top, 60);
+  }
+}
+
+.inventory-transfer-wrap {
+  .transfer-head {
+    .txt {
+      @include rem(font-size, 20);
+      font-family: "anton";
+    }
+    .ico-arrow-right {
+      @include rem(margin, 0 13 2);
+    }
+  }
+  .transfer-cotnent {
+    @include rem(margin-top, 40);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    @include rem(padding-bottom, 30);
+    border-bottom: 1px solid #444444;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      @include rem(margin, 0 -20);
+      @include rem(margin-top, 40);
+    }
+    .item-box {
+      flex: 0 0 14.3rem;
+      @include rem(height, 168);
+      background-color: #888;
+      @include rem(border-radius, 10);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .item-info {
+      @include rem(margin-left, 60);
+      @include rem(width, 220);
+      @media (max-width: 767px) {
+        margin-left: 0;
+        @include rem(margin-top, 30);
+      }
+    }
+    .info-box {
+      white-space: nowrap;
+      position: relative;
+    }
+    .txt {
+      display: block;
+      width: calc(100% - 3rem);
+      @include rem(margin-top, 5);
+      @include ellipsis;
+    }
+    .info-title {
+      color: #888;
+      @include rem(font-size, 17);
+      @include rem(line-height, 20);
+    }
+    .info-desc,
+    .info-input {
+      @include rem(font-size, 15);
+      font-family: "barlow";
+    }
+    .info-input {
+      overflow: visible;
+      & + .copy-btn {
+        @include rem(bottom, 7);
+        @include rem(right, -10);
+      }
+    }
+    .copy-btn {
+      position: absolute;
+      bottom: 0.4rem;
+      right: 0;
+    }
+    input {
+      @include rem(padding, 5 30 5 10);
+      width: calc(100% + 4rem);
+      @include rem(height, 28);
+      background-color: transparent;
+      border: 1px solid #444;
+      @include rem(margin-top, 5);
+      @include rem(margin-left, -20);
+      @include rem(font-size, 15);
+      font-family: "barlow";
+      color: #fff;
+      &::placeholder {
+        color: #444;
+      }
+    }
+  }
+  .ico-transfer-arrow {
+    @include rem(margin, 23 0);
+  }
+  .transfer-foot {
+    @include rem(margin-top, 30);
+
+    .txt {
+      @include rem(font-size, 17);
+      @include rem(line-height, 20);
+      font-family: "barlow";
+      margin: 0 auto;
+      @media (max-width: 767px) {
+        @include rem(width, 200);
+      }
+    }
+    .small {
+      @include rem(font-size, 15);
+      font-family: "barlow";
+      @include rem(margin-top, 5);
+    }
+    .value {
+      @media (max-width: 767px) {
+        display: block;
+      }
+      &.error {
+        color: #ff6767;
+      }
+    }
+  }
+}
+.caution-head {
+  @include rem(font-size, 15);
+  font-weight: 700;
+  font-family: "barlow";
+}
+.caution-content {
+  @include rem(font-size, 17);
+  font-family: "barlow";
+  @include rem(margin-top, 15);
+}
+.myinfo-wrap {
+  background-color: #000;
+  @include centerBox;
+  padding: 0;
+  .box + .box {
+    @include rem(margin-left, 80);
+    @media (max-width: 767px) {
+      margin-left: 0;
+      @include rem(margin-top, 30);
+    }
+  }
+  @media (max-width: 767px) {
+    .box {
+      text-align: center;
+    }
+  }
+  .flex-box {
+    display: flex;
+    align-items: center;
+  }
+  .myinfo-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include rem(padding, 30 20);
+    border-bottom: 1px solid #444;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  .myinfo-key {
+    color: #888;
+    @include rem(font-size, 17);
+    @include rem(line-height, 20);
+    font-family: "barlow";
+  }
+  .myinfo-value {
+    @include rem(font-size, 15);
+    @include rem(line-height, 18);
+    font-family: "barlow";
+    color: #fff;
+    @include rem(margin-top, 5);
+    .ellipsis {
+      display: inline-block;
+      @include ellipsis;
+
+      @include rem(width, 169);
+    }
+  }
+  .profile-img {
+    @include rem(width, 30);
+    @include rem(height, 30);
+    display: inline-flex;
+    position: relative;
+    @include rem(margin-right, 5);
+    i {
+      @include rem(width, 30);
+      @include rem(height, 30);
+      @include rem(background-size, 30);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .user-id {
+    color: #fff;
+    font-family: "barlow";
+    @include rem(font-size, 17);
+    @include rem(line-height, 20);
+  }
+  .notification {
+    .txt {
+      @include rem(font-size, 15);
+      @include rem(line-height, 18);
+      font-family: "barlow";
+      color: #fff;
+    }
+  }
+  .description {
+    @include rem(font-size, 15);
+    font-family: "barlow";
+    @include rem(line-height, 18);
+    color: #888;
+    @include rem(margin-top, 5);
+    .highlight {
+      color: #fff;
+    }
+  }
+  .myinfo-address-wrap {
+    @include rem(padding, 30 0);
+    .lists {
+      @include rem(padding, 0 15);
+      @include rem(width, 852);
+      margin: 0 auto;
+      max-width: 100%;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+    .myinfo-value {
+    }
+    .list + .list {
+      @include rem(margin-top, 30);
+    }
+    .ellipsis {
+      @include ellipsis;
+      display: inline-block;
+      width: calc(100% - 7rem);
+      @media (max-width: 767px) {
+        @include rem(width, 169);
+      }
+    }
+    .copy-btn {
+      @include rem(margin-left, 5);
+      transform: translateY(-0.2rem);
+    }
+  }
+}
+.check-box {
+  position: relative;
+  @include rem(width, 32);
+  @include rem(height, 16);
+  display: inline-block;
+  @include rem(top, 3);
+  @include rem(margin-left, 15);
+  input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .box {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    @include rem(border-radius, 8);
+    position: absolute;
+    border: 1px solid #83a0ff;
+
+    top: 0;
+    left: 0;
+    transition: background-color 0.2s ease-out;
+    &::before {
+      content: "";
+      @include rem(width, 12);
+      @include rem(height, 12);
+      @include rem(border-radius, 6);
+      background-color: #83a0ff;
+      position: absolute;
+      @include rem(top, 1);
+      @include rem(left, 1);
+      transition: all 0.3s;
+    }
+  }
+  input:checked + .box {
+    background-color: #83a0ff;
+    &::before {
+      left: calc(50% + 0.1rem);
+      background-color: #1b1b1b;
+    }
+  }
+}

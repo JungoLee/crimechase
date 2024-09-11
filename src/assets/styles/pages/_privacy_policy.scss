@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+.privacy-policy-page {
+  min-height: calc(100vh - 7rem);
+  @include centerBox;
+  @include rem(padding-top, 220);
+  @include rem(padding-bottom, 120);
+  .update-box {
+    text-align: right;
+    font-family: "Barlow";
+    @include rem(margin-bottom, 50);
+    border-bottom: 1px solid #fff;
+    @include rem(padding-bottom, 20);
+  }
+  .f-40 {
+    display: block;
+    & + .f-24 {
+      @include rem(margin-top, 42);
+    }
+  }
+  .f-35 {
+    display: block;
+    @include rem(font-size, 30);
+    @include rem(margin-top, 24);
+    @include rem(margin-bottom, 14);
+    font-weight: 200;
+  }
+  .f-24 {
+    @include rem(line-height, 32);
+    font-weight: 300;
+    & + .f-24 {
+      @include rem(margin-top, 24);
+    }
+    & + .f-40 {
+      @include rem(margin-top, 42);
+    }
+  }
+  .table-container {
+    @include rem(margin-top, 20);
+    & + .f-40 {
+      @include rem(margin-top, 42);
+    }
+    & + .f-24 {
+      @include rem(margin-top, 42);
+    }
+  }
+  ul {
+    list-style: lower-alpha;
+    font-family: "Barlow";
+    font-weight: thin;
+    @include rem(font-size, 16);
+    color: #fff;
+    @include rem(margin-top, 24);
+    @include rem(padding-left, 42);
+    li + li {
+      @include rem(margin-top, 8);
+    }
+  }
+}

@@ -244,6 +244,29 @@ body {
     @include rem(font-size, 18);
     @include rem(line-height, 18);
   }
+  &.f-16 {
+    @include rem(font-size, 16);
+    @include rem(line-height, 16);
+    display: block;
+    @include rem(margin-top, 12);
+  }
+
+  &.f-22 {
+    @include rem(font-size, 22);
+    @include rem(line-height, 22);
+    display: block;
+    @include rem(margin-top, 8);
+  }
+  &.f-14 {
+    @include rem(font-size, 14);
+    @include rem(line-height, 14);
+    display: block;
+    @include rem(margin-top, 20);
+    color: #838383;
+  }
+  &.pre-line {
+    white-space: pre-line;
+  }
   &.red {
     color: $primary;
   }
@@ -271,6 +294,18 @@ body {
     @media (max-width: 767px) {
       @include rem(margin-left, 10);
     }
+  }
+  &.legendary {
+    color: #d8cc49;
+  }
+  &.epic {
+    color: #9e0ae4;
+  }
+  &.rare {
+    color: #4ca3dd;
+  }
+  &.common {
+    color: #abe628;
   }
 }
 .motion-box {

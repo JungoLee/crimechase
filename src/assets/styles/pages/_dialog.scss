@@ -71,12 +71,20 @@
       display: none;
     }
   }
+  .public-title {
+    font-family: "Anton";
+    color: #fff;
+    @include rem(margin-top, 0);
+  }
   .img-box {
+    @include rem(max-width, 200);
+    margin: 0 auto;
     @include rem(margin-top, 60);
     img {
       width: 100%;
     }
   }
+
   &.caution {
     .dialog-frame {
       background-color: $primary;

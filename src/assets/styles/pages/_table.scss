@@ -3,6 +3,15 @@
   width: 1240px;
   max-width: 100%;
   overflow-x: auto;
+  &.width-50 {
+    width: 50%;
+    .table-scroll-wrapper {
+      min-width: auto;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .table-scroll-wrapper {
     min-width: 850px;
   }

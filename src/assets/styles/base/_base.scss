@@ -264,6 +264,11 @@ body {
     @include rem(margin-top, 20);
     color: #838383;
   }
+  &.f-12 {
+    @include rem(font-size, 12);
+    @include rem(line-height, 12);
+    display: block;
+  }
   &.pre-line {
     white-space: pre-line;
   }
@@ -307,6 +312,27 @@ body {
   &.common {
     color: #abe628;
   }
+  .legendary {
+    color: #d8cc49;
+  }
+  .epic {
+    color: #9e0ae4;
+  }
+  .rare {
+    color: #4ca3dd;
+  }
+  .common {
+    color: #abe628;
+  }
+  &.mt-20 {
+    @include rem(margin-top, 20);
+  }
+  &.color-grey {
+    color: #888888;
+  }
+}
+.util-area {
+  text-align: left;
 }
 .motion-box {
   display: inline-flex;

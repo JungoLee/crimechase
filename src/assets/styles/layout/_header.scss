@@ -129,6 +129,9 @@
     position: relative;
     @include rem(padding-left, 115);
     @include rem(margin-left, 50);
+    @media (max-width: 930px) {
+      @include rem(padding-left, 60);
+    }
     @media (max-width: 767px) {
       // display: none;
       flex-direction: column;
@@ -210,6 +213,12 @@
     }
     & + .one-depth {
       @include rem(margin-left, 50);
+      @media (max-width: 1090px) {
+        @include rem(margin-left, 30);
+      }
+      @media (max-width: 930px) {
+        @include rem(margin-left, 20);
+      }
       @media (max-width: 767px) {
         @include rem(margin-top, 30);
         margin-left: 0;

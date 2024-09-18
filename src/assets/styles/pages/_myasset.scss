@@ -330,6 +330,9 @@
   @include rem(font-size, 15);
   font-weight: 700;
   font-family: "barlow";
+  &.f-22 {
+    @include rem(font-size, 22);
+  }
 }
 .caution-content {
   @include rem(font-size, 17);

@@ -201,6 +201,9 @@
       width: 100%;
       justify-content: flex-start;
     }
+    &.relative {
+      position: relative;
+    }
     &.home {
       a {
         width: auto;
@@ -212,7 +215,7 @@
       }
     }
     & + .one-depth {
-      @include rem(margin-left, 50);
+      @include rem(margin-left, 32);
       @media (max-width: 1090px) {
         @include rem(margin-left, 30);
       }

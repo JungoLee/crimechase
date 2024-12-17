@@ -3,7 +3,7 @@
   "useTabs": false,
   "htmlWhitespaceSensitivity": "strict",
   "endOfLine": "lf",
-  "printWidth": 440,
+  "printWidth": 1000,
   "overrides": [
     {
       "files": "gulp/**/*.js",

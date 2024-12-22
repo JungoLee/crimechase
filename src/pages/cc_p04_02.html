@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <title>Crime & Chase</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../assets/styles/style.css" type="text/css" rel="stylesheet" />
+  <link href="../assets/styles/style2.css" type="text/css" rel="stylesheet" />
+  <style>
+    .ico-arrow-red {
+      margin-left: 1rem;
+      vertical-align: .1rem;
+    }
+
+    .more-btn {
+      margin: 0 auto;
+      margin-top: 6rem;
+    }
+
+    .btn-center {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .more-btn {}
+
+      .myasset-container-page .inventory-detail {
+        margin-bottom: 0;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('pathPagesInclude/_header.html', {isLogin:true})
+
+    <div id="container">
+      <div id="content">
+        <div class="container-visual-area">
+          <div class="visual-area">
+            <div class="visual-img-box">
+              <img src="../assets/images/visual_bg_img03.jpg" alt="">
+            </div>
+            <div class="visual-txt">
+              <h2 class="title">
+                <span class="public-txt type02">MY</span>
+                <span class="public-txt ml-30"> ASSET</span>
+              </h2>
+            </div>
+            <!-- 라우트 이동할떄 setFn.visualText();  실행 필요 -->
+          </div>
+          <div class="breadcrunb-area">
+            <ul class="breadcrunb-list">
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">HOME</a>
+              </li>
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">MY ASSET</a>
+              </li>
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">WEB3 INVENTORY</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="myasset-container-page">
+          <div class="inventory-wrap">
+            <div class="tab-container">
+              <div class="inventory-top">
+                <div class="tab-head">
+                  <button class="tab-btn active" type="button">
+                    <span class="txt">WEB3 INVENTORY</span>
+                  </button>
+                  <button class="tab-btn" type="button">
+                    <span class="txt">KEYLESS</span>
+                  </button>
+                </div>
+                <div class="inventory-address">
+                  <div class="left-box">
+                    <div class="id-box">
+                      <p class="address">
+                        <span class="key">ADDRESS : </span>
+                        <span class="value">
+                          0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</span>
+
+                      </p>
+                      <p class="aptos">
+                        <span class="key">APTOS : </span>
+                        <span class="value"> 15.4653 APT</span>
+                        <a href="">
+                          <i class="ico-arrow-red" aria-hidden="true"></i>
+                        </a>
+                      </p>
+                    </div>
+                    <button type="button" class="copy-btn"></button>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn grey">
+                    <span class="txt">REFRESH</span>
+                    <i class="ico-refresh"></i>
+                  </button>
+                  <button type="button" class="btn my-info-btn">
+                    <span class="txt">MY INFO</span>
+                    <i class="ico-arrow-btn"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="inventory-detail">
+                <ul class="lists">
+                  <li class="list">
+                    <div class="item-box">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9nu7n0E08-6IWTwb9DV6B2sCAjrEBNUTlA&s"
+                        alt="">
+                    </div>
+                    <div class="tooltip-area">
+                      <button type="button" class="tooltip-btn">
+                        <i class="ico-tooltip" aria-hidden="true"></i>
+                      </button>
+                      <div class="tooltip-detail">
+                        <ul class="tooltip-lists">
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn c4" type="button">Inventory Transfer</button>
+                          </li>
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9nu7n0E08-6IWTwb9DV6B2sCAjrEBNUTlA&s"
+                        alt="">
+                    </div>
+                    <div class="tooltip-area">
+                      <button type="button" class="tooltip-btn type02">
+                        <i class="ico-tooltip" aria-hidden="true"></i>
+                      </button>
+                      <div class="tooltip-detail">
+                        <ul class="tooltip-lists">
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                          </li>
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                      <div class="lock-box">
+                        <i class="ico-lock" aria-hidden="true"></i>
+                        <p class="public-txt f-24">LOCK</p>
+                      </div>
+                    </div>
+                    <div class="tooltip-area">
+                      <button type="button" class="tooltip-btn">
+                        <i class="ico-tooltip" aria-hidden="true"></i>
+                      </button>
+                      <div class="tooltip-detail">
+                        <ul class="tooltip-lists">
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                          </li>
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+
+                    </div>
+                    <div class="tooltip-area">
+                      <button type="button" class="tooltip-btn type02">
+                        <i class="ico-tooltip" aria-hidden="true"></i>
+                      </button>
+                      <div class="tooltip-detail">
+                        <ul class="tooltip-lists">
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                          </li>
+                          <li class="tooltip-list">
+                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                      <div class="info-name-box">
+                        <p class="tag-box public-txt red f-bar-bold f-12">#1234567890</p>
+                        <p class="public-txt f-15 f-bar-md">Sniper Badge</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                      <div class="item-box">
+                        <div class="info-name-box">
+                          <p class="tag-box public-txt red f-bar-bold f-12">#1234567890123456789012345678901234567890
+                          </p>
+                          <p class="public-txt f-15 f-bar-md">Sniper Badge</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                  <li class="list">
+                    <div class="item-box">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-center">
+                <button type="button" class="btn more-btn">
+                  <span class="txt">MORE</span>
+                  <i class="ico-arrow-down"></i>
+                </button>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  @@include('pathPagesInclude/_footer.html')
+  </div>
+  <div class="dimm"></div>
+  <script src="../assets/script/lib/swiper-bundle.min.js"></script>
+  <script src="../assets/script/lib/gsap.js"></script>
+  <script src="../assets/script/common.js"></script>
+  <script>
+    document.querySelectorAll(".tooltip-area").forEach((each) => {
+      const tooltip = setFn.tooltip(each)
+    })
+
+
+    const confirmDialog = setFn.dialog({
+      confirmText: 'OK',
+      cancelText: 'CANCEL',
+      classAdd: "caution",
+      confirm() {
+        confirmDialog.close()
+        dialog.close();
+      },
+      cancel() {
+        confirmDialog.close()
+      }
+    })
+    // APT : NOT ENOUGH 일떄
+    const dialog = setFn.dialog({
+      confirmText: 'OK',
+      // APT : NOT ENOUGH 일때
+      // confirmText: 'APT : NOT<br>ENOUGH',
+      // confirmDisabled: true,
+      cancelText: 'CANCEL',
+      confirm() {
+        const customHTML = `
+<div class="caution-wrap">
+  <div class="caution-head">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</div>
+  <div class="caution-content">
+    <p class="txt">
+      Do you want to transfer NFT to the address?<br/>
+      Assets transferred externally will be fully owned by the wallet owner.<br/>
+      Please check the correct wallet address.
+        `
+        confirmDialog.open({
+          customHTML
+        })
+      },
+      cancel() {
+        dialog.close();
+      }
+    })
+
+    document.querySelectorAll('.dialog-open-btn').forEach((each) => {
+      const type = each.classList.contains('c4') ? 'c4' : 'ex'
+      let addressContentHTML, addressHeadHTML
+      if (type === 'c4') {
+        addressHeadHTML = `
+<span class="txt">C4 WALLET</span>
+<i class="ico-arrow-right"></i><br class="mo-show"/>
+<span class="txt">TRANSFER TO WALLET</span>
+`
+        addressContentHTML = `
+<div class="info-box">
+  <p class="info-title">INVENTORY ADDRESS</p>
+  <p class="info-desc">
+    <span class="txt">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</span>
+  </p>
+  <button type="button" class="copy-btn"></button>
+</div>
+        `
+      } else if (type === 'ex') {
+        addressHeadHTML = `
+<span class="txt">C4 WALLET</span>
+<i class="ico-arrow-right"></i><br class="mo-show"/>
+<span class="txt">TRANSFER TO EXTERNAL WALLET</span>
+`
+        addressContentHTML = `
+<div class="info-box">
+  <p class="info-title">TRANSFER TARGET WALLET</p>
+  <p class="info-input">
+    <input type="text" class="input-txt" placeholder="Write to the transfer wallet." />
+  </p>
+  <button type="button" class="copy-btn"></button>
+</div>`
+      }
+      const customHTML = `
+<div class="inventory-transfer-wrap">
+  <div class="transfer-head">
+  ${addressHeadHTML}
+  </div>
+  <div class="transfer-cotnent">
+    <div class="item-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9nu7n0E08-6IWTwb9DV6B2sCAjrEBNUTlA&s" alt="">
+    </div>
+    <div class="item-info">
+      <div class="info-box">
+        <p class="info-title">C4 WALLET ADDRESS</p>
+        <p class="info-desc">
+          <span class="txt">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</span>
+        </p>
+          <button type="button" class="copy-btn"></button>
+      </div>
+      <i class="ico-transfer-arrow"></i>
+    ${addressContentHTML}
+
+    </div>
+  </div>
+  <div class="transfer-foot">
+    <p class="txt">Do you agree to transfer this asset to the wallet?</p>
+    <!-- 없을때 error 클래스 value 에 추가 -->
+    <p class="txt small">Gas Fee: 0.0001 APT <span class="value">[ APT held: 0.05 APT ]</span> </p>
+  </div>
+</div>
+        `
+      each.addEventListener('click', () => {
+
+        dialog.open({
+          customHTML
+        })
+      })
+
+    })
+
+  </script>
+</body>
+
+</html>

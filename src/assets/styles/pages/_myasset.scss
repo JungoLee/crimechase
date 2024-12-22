@@ -193,7 +193,6 @@
   .my-info-btn {
     position: absolute;
     top: 0;
-    display: block;
     @include rem(right, 20);
     @media (max-width: 767px) {
       position: relative;

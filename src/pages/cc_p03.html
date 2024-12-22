@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <title>Crime & Chase</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../assets/styles/style.css" type="text/css" rel="stylesheet" />
+  <link href="../assets/styles/style2.css" type="text/css" rel="stylesheet" />
+  <style>
+    .puzzle-container-page {
+      text-align: center;
+    }
+
+    .puzzle-container-page .btn {
+      height: 9rem;
+      padding: 0 3.5rem;
+      margin-top: 6rem;
+    }
+
+    .puzzle-container-page .btn .txt {
+      font-size: 2.8rem;
+    }
+
+    .puzzle-container-page .puzzle-box {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 6rem;
+      width: 99.5rem;
+      max-width: 100%;
+    }
+
+    .puzzle-container-page .puzzle-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .puzzle-container-page .puzzle-box::before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 61.3%;
+    }
+
+    @media (max-width: 767px) {
+      .puzzle-container-page .puzzle-box {
+        width: calc(100% - 3rem);
+        margin: 0 auto;
+        margin-top: 3rem;
+      }
+
+      .puzzle-container-page .f-bar-bold.mt-60 {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        margin-top: 4rem;
+      }
+
+      .puzzle-container-page .f-bar-md.mt-10 {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding: 0 1.5rem;
+      }
+
+      .puzzle-container-page .btn {
+        height: 6rem;
+        padding: 0 2.3rem;
+        margin-top: 3rem;
+      }
+
+      .puzzle-container-page .btn .txt {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('pathPagesInclude/_header.html', {isLogin:false})
+
+    <div id="container">
+      <div id="content">
+        <div class="container-visual-area">
+          <div class="visual-area">
+            <div class="visual-img-box">
+              <img src="../assets/images/visual_bg_img05.jpg" alt="">
+            </div>
+            <div class="visual-txt">
+              <h2 class="title">
+                <span class="public-txt type02">JACKPOT</span>
+                <span class="public-txt ml-30">PUZZLE</span>
+              </h2>
+            </div>
+            <!-- 라우트 이동할떄 setFn.visualText();  실행 필요 -->
+          </div>
+          <div class="breadcrunb-area">
+            <ul class="breadcrunb-list">
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">HOME</a>
+              </li>
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">PUZZLE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="puzzle-container-page">
+          <h3 class="public-txt f-40 public-title">
+            <span class="white">CRIME & CHASE </span> JACKPOT PUZZLE PLAY!
+          </h3>
+          <p class="public-txt f-bar-md center-flex f-22 mt-30 center-txt explain-txt">
+            Get big Rewards that can be used in the game through<br class="pc-show">
+            Crime & Chase's 3-match puzzle!
+          </p>
+
+          <div class="puzzle-box">
+            <img src="../assets/images/puzzle_bg.jpg" alt="Welcom to Crime & Chase JackPot Puzzle">
+          </div>
+          <button type="button" class="btn btn-start">
+            <span class="txt">
+              PUZZLE START
+            </span>
+          </button>
+          <p class="public-txt center-flex f-40 mt-100 important-notice">IMPORTANT NOTICE</p>
+          <p class="public-txt block center-txt f-18 f-bar-md mt-30 explain-txt">
+            Puzzle points regenerate at 1 point every 2 hours, up to a maximum of 12 points.<br class="pc-show" />
+            Leaving the page during a puzzle game will forfeit the used points.<br class="pc-show" />
+            Rewards are based on clears and can be used after launch.<br class="pc-show" />
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  @@include('pathPagesInclude/_footer.html')
+  </div>
+  <div class="dimm"></div>
+
+  <script src="../assets/script/lib/swiper-bundle.min.js"></script>
+  <script src="../assets/script/lib/gsap.js"></script>
+  <script src="../assets/script/common.js"></script>
+  <script>
+    const dialog = setFn.dialog({
+      message: "Please Log in.",
+      cancelText: "GO BACK",
+      confirmText: "LOG IN",
+      confirm() {
+        alert('확인')
+        dialog.close();
+      },
+      cancel() {
+        alert('취소')
+        dialog.close();
+      }
+    })
+    dialog.open()
+  </script>
+</body>
+
+</html>

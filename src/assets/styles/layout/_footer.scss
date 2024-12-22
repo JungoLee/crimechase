@@ -32,9 +32,6 @@
     > li {
       @include rem(padding, 0 20);
       position: relative;
-      .popup-btn {
-        color: #1b1b1b;
-      }
       @media (max-width: 767px) {
       }
       &::before {

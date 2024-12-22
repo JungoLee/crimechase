@@ -198,17 +198,9 @@ body {
   color: #fff;
   display: inline-flex;
   @include rem(line-height, 160);
-  &.flex {
-    display: flex;
-  }
   &.type02 {
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-  }
-  &.f-200 {
-    @include rem(font-size, 200);
-    @include rem(line-height, 200);
-    font-weight: regular;
   }
   &.f-140 {
     @include rem(font-size, 140);
@@ -218,11 +210,6 @@ body {
   &.f-80 {
     @include rem(font-size, 80);
     @include rem(line-height, 80);
-    font-weight: regular;
-  }
-  &.f-60 {
-    @include rem(font-size, 60);
-    @include rem(line-height, 60);
     font-weight: regular;
   }
   &.f-52 {
@@ -256,9 +243,6 @@ body {
   &.f-18 {
     @include rem(font-size, 18);
     @include rem(line-height, 18);
-    &.block {
-      display: block;
-    }
   }
   &.f-16 {
     @include rem(font-size, 16);
@@ -288,15 +272,8 @@ body {
   &.pre-line {
     white-space: pre-line;
   }
-  .sky-blue {
-    color: #83a0ff;
-  }
-  &.red,
-  .red {
+  &.red {
     color: $primary;
-  }
-  &.orange {
-    color: #ff7e00;
   }
   .white {
     color: #fff;
@@ -347,53 +324,11 @@ body {
   .common {
     color: #abe628;
   }
-  &.mt-10 {
-    @include rem(margin-top, 10);
-  }
   &.mt-20 {
     @include rem(margin-top, 20);
   }
-  &.mt-30 {
-    @include rem(margin-top, 30);
-  }
-  &.mt-40 {
-    @include rem(margin-top, 40);
-  }
-  &.mt-60 {
-    @include rem(margin-top, 60);
-  }
-  &.mt-100 {
-    @include rem(margin-top, 100);
-  }
-  &.horizon-line {
-    position: relative;
-    white-space: nowrap;
-    &::before,
-    &::after {
-      content: "";
-      display: inline-flex;
-      width: 100%;
-      height: 1px;
-      background-color: #ffffff;
-    }
-    &::after {
-      @include rem(margin-left, 45);
-      @media (max-width: 767px) {
-        @include rem(margin-left, 15);
-      }
-    }
-    &::before {
-      @include rem(margin-right, 45);
-      @media (max-width: 767px) {
-        @include rem(margin-right, 15);
-      }
-    }
-  }
   &.color-grey {
     color: #888888;
-  }
-  &.center-txt {
-    text-align: center;
   }
 }
 .util-area {

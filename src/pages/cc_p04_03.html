@@ -16,6 +16,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   <link href="../assets/styles/style.css" type="text/css" rel="stylesheet" />
   <link href="../assets/styles/style2.css" type="text/css" rel="stylesheet" />
+  <!-- content 영역 -->
   <style>
     .ico-arrow-red {
       margin-left: 1rem;
@@ -32,12 +33,75 @@
     }
 
     @media (max-width: 767px) {
-      .more-btn {}
-
       .myasset-container-page .inventory-detail {
         margin-bottom: 0;
       }
+    }
+  </style>
+  <!-- popup 영역 -->
+  <style>
+    .connect-wallet-wrapper~.dialog-footer {
+      display: none !important;
+    }
 
+    .connect-wallet-wrapper {
+      min-width: 34rem;
+      ;
+    }
+
+    .connect-wallet-wrapper .title {
+      font-size: 2rem;
+      line-height: 3rem;
+      font-family: "Anton";
+    }
+
+    .connect-wallet-wrapper .wallet-content {
+      margin: 0 auto;
+      margin-top: 4rem;
+      padding: 2rem 3rem;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #444;
+      width: auto;
+      display: inline-flex;
+    }
+
+    .connect-wallet-wrapper .wallet-content a {
+      display: flex;
+      align-items: center;
+    }
+
+    .connect-wallet-wrapper .text {
+      font-size: 1.7rem;
+      line-height: 2rem;
+      margin-left: 2rem;
+    }
+
+    .connect-wallet-wrapper .text {
+      font-size: 1.7rem;
+      line-height: 2rem;
+      margin-left: 2rem;
+    }
+
+    .connect-wallet-wrapper .wallet-footer {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+
+    .connect-wallet-wrapper .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+
+    @media (max-width: 767px) {
+      .connect-wallet-wrapper {
+        min-width: auto;
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
@@ -224,7 +288,6 @@
                     </div>
                   </li>
                   <li class="list">
-                  <li class="list">
                     <div class="item-box">
                       <div class="info-name-box">
                         <p class="tag-box public-txt red f-bar-bold f-12">#1234567890123456789012345678901234567890
@@ -286,92 +349,41 @@
   <script src="../assets/script/lib/gsap.js"></script>
   <script src="../assets/script/common.js"></script>
   <script>
-    document.querySelectorAll(".tooltip-area").forEach((each) => {
-      const tooltip = setFn.tooltip(each)
-    })
 
-
-    const confirmDialog = setFn.dialog({
-      confirmText: 'OK',
-      cancelText: 'CANCEL',
-      classAdd: "caution",
+    const dialog = setFn.dialog({
+      confirmText: false,
+      cancelText: false,
       confirm() {
-        confirmDialog.close()
-        dialog.close();
+
       },
       cancel() {
-        confirmDialog.close()
+        dialog.close();
       }
     })
     const customHTML = `
-<div class="caution-wrap">
-  <div class="caution-head">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</div>
-  <div class="caution-content">
-    <p class="txt">
-      Do you want to transfer NFT to the address?<br class="pc"/>
-      Assets transferred externally will be fully owned by the wallet owner.<br/>
-      Please check the correct wallet address.
-    </p>
+  <div class="connect-wallet-wrapper">
+    <div class="title">CONNECT WALLET</div>
+    <div class="wallet-content">
+      <a href="">
+        <i class="ico-petra-apt" aria-hidden="true"></i>
+        <span class="text f-bar-bold">Petra Aptos Wallet</span>
+        <i class="ico-arrow-red" aria-hidden="true"></i>
+      </a>
+
+    </div>
+    <div class="wallet-footer f-bar-md">
+      By connecting your wallet and using Crime & Chase,<br class="pc-show">
+      you agree to our Terms of service and Privacy Policy.
+    </div>
+    <button type="button" class="close-btn" onClick="dialog.close()">
+      <i class="ico-close"></i>
+    </button>
   </div>
-</div>
         `
-    confirmDialog.open({
+
+    dialog.open({
       customHTML
     })
-
-
-    const confirmDialog4 = setFn.dialog({
-      confirmText: 'OK',
-      cancelText: false,
-      classAdd: "caution",
-      confirm() {
-        confirmDialog4.close()
-        dialog.close();
-      },
-      cancel() {
-        confirmDialog4.close()
-      }
-    })
-    const customHTML4 = `
-<div class="caution-wrap">
-  <div class="caution-content">
-    <p class="txt">
-      The asset is currently in use within the Crime & Chase.<br class="pc-show">
-      To transfer it to another wallet,<br class="pc-show">
-      please switch it to an inavtive state in the Crime & Chase.
-    </p>
-  </div>
-</div>
-        `
-    confirmDialog4.open({
-      customHTML: customHTML4
-    })
-
-    const confirmDialog5 = setFn.dialog({
-      confirmText: 'CONFIRM',
-      cancelText: 'CANCEL',
-      classAdd: "caution",
-      confirm() {
-        confirmDialog5.close()
-        dialog.close();
-      },
-      cancel() {
-        confirmDialog5.close()
-      }
-    })
-    const customHTML5 = `
-<div class="caution-wrap">
-  <div class="caution-content">
-    <p class="txt">
-      Would you like to disconnect your wallet?
-    </p>
-  </div>
-</div>
-        `
-    confirmDialog5.open({
-      customHTML: customHTML5
-    })
-
   </script>
 </body>
 

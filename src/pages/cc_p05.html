@@ -17,6 +17,10 @@
   <link href="../assets/styles/style.css" type="text/css" rel="stylesheet" />
   <link href="../assets/styles/style2.css" type="text/css" rel="stylesheet" />
   <style>
+    .myasset-container-page {
+      position: relative;
+    }
+
     .ico-arrow-red {
       margin-left: 1rem;
       vertical-align: .1rem;
@@ -80,10 +84,10 @@
             <div class="tab-container">
               <div class="inventory-top">
                 <div class="tab-head">
-                  <button class="tab-btn active" type="button">
+                  <button class="tab-btn" type="button">
                     <span class="txt">WEB3 INVENTORY</span>
                   </button>
-                  <button class="tab-btn" type="button">
+                  <button class="tab-btn active" type="button">
                     <span class="txt">KEYLESS</span>
                   </button>
                 </div>
@@ -133,10 +137,10 @@
                       <div class="tooltip-detail">
                         <ul class="tooltip-lists">
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                            <button class="dialog-open-btn" type="button">Web3 Inventory Transfer</button>
                           </li>
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                            <button class="dialog-open-btn" type="button">External Wallet Transfer</button>
                           </li>
                         </ul>
                       </div>
@@ -155,10 +159,10 @@
                       <div class="tooltip-detail">
                         <ul class="tooltip-lists">
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                            <button class="dialog-open-btn" type="button">Web3 Inventory Transfer</button>
                           </li>
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                            <button class="dialog-open-btn" type="button">External Wallet Transfer</button>
                           </li>
                         </ul>
                       </div>
@@ -178,10 +182,10 @@
                       <div class="tooltip-detail">
                         <ul class="tooltip-lists">
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                            <button class="dialog-open-btn" type="button">Web3 Inventory Transfer</button>
                           </li>
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                            <button class="dialog-open-btn" type="button">External Wallet Transfer</button>
                           </li>
                         </ul>
                       </div>
@@ -198,10 +202,10 @@
                       <div class="tooltip-detail">
                         <ul class="tooltip-lists">
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn c4" type="button">Keyless Transfer</button>
+                            <button class="dialog-open-btn" type="button">Web3 Inventory Transfer</button>
                           </li>
                           <li class="tooltip-list">
-                            <button class="dialog-open-btn ex" type="button">External Wallet Transfer</button>
+                            <button class="dialog-open-btn" type="button">External Wallet Transfer</button>
                           </li>
                         </ul>
                       </div>
@@ -217,22 +221,11 @@
                   </li>
                   <li class="list">
                     <div class="item-box">
-                      <div class="info-name-box">
-                        <p class="tag-box public-txt red f-bar-bold f-12">#1234567890</p>
-                        <p class="public-txt f-15 f-bar-md">Sniper Badge</p>
-                      </div>
                     </div>
                   </li>
-                  <li class="list">
                   <li class="list">
                     <div class="item-box">
-                      <div class="info-name-box">
-                        <p class="tag-box public-txt red f-bar-bold f-12">#1234567890123456789012345678901234567890
-                        </p>
-                        <p class="public-txt f-15 f-bar-md">Sniper Badge</p>
-                      </div>
                     </div>
-                  </li>
                   </li>
                   <li class="list">
                     <div class="item-box">
@@ -271,7 +264,6 @@
 
             </div>
           </div>
-
         </div>
 
       </div>
@@ -303,73 +295,101 @@
         confirmDialog.close()
       }
     })
-    const customHTML = `
+    // APT : NOT ENOUGH 일떄
+    const dialog = setFn.dialog({
+      confirmText: 'OK',
+      // APT : NOT ENOUGH 일때
+      // confirmText: 'APT : NOT<br>ENOUGH',
+      // confirmDisabled: true,
+      cancelText: 'CANCEL',
+      confirm() {
+        const customHTML = `
 <div class="caution-wrap">
   <div class="caution-head">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</div>
   <div class="caution-content">
     <p class="txt">
-      Do you want to transfer NFT to the address?<br class="pc"/>
+      Do you want to transfer NFT to the address?<br/>
       Assets transferred externally will be fully owned by the wallet owner.<br/>
       Please check the correct wallet address.
-    </p>
-  </div>
-</div>
         `
-    confirmDialog.open({
-      customHTML
-    })
-
-
-    const confirmDialog4 = setFn.dialog({
-      confirmText: 'OK',
-      cancelText: false,
-      classAdd: "caution",
-      confirm() {
-        confirmDialog4.close()
-        dialog.close();
+        confirmDialog.open({
+          customHTML
+        })
       },
       cancel() {
-        confirmDialog4.close()
+        dialog.close();
       }
-    })
-    const customHTML4 = `
-<div class="caution-wrap">
-  <div class="caution-content">
-    <p class="txt">
-      The asset is currently in use within the Crime & Chase.<br class="pc-show">
-      To transfer it to another wallet,<br class="pc-show">
-      please switch it to an inavtive state in the Crime & Chase.
-    </p>
-  </div>
-</div>
-        `
-    confirmDialog4.open({
-      customHTML: customHTML4
     })
 
-    const confirmDialog5 = setFn.dialog({
-      confirmText: 'CONFIRM',
-      cancelText: 'CANCEL',
-      classAdd: "caution",
-      confirm() {
-        confirmDialog5.close()
-        dialog.close();
-      },
-      cancel() {
-        confirmDialog5.close()
+    document.querySelectorAll('.dialog-open-btn').forEach((each) => {
+      const type = each.classList.contains('c4') ? 'c4' : 'ex'
+      let addressContentHTML, addressHeadHTML
+      if (type === 'c4') {
+        addressHeadHTML = `
+<span class="txt">C4 WALLET</span>
+<i class="ico-arrow-right"></i><br class="mo-show"/>
+<span class="txt">TRANSFER TO WALLET</span>
+`
+        addressContentHTML = `
+<div class="info-box">
+  <p class="info-title">INVENTORY ADDRESS</p>
+  <p class="info-desc">
+    <span class="txt">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</span>
+  </p>
+  <button type="button" class="copy-btn"></button>
+</div>
+        `
+      } else if (type === 'ex') {
+        addressHeadHTML = `
+<span class="txt">C4 WALLET</span>
+<i class="ico-arrow-right"></i><br class="mo-show"/>
+<span class="txt">TRANSFER TO EXTERNAL WALLET</span>
+`
+        addressContentHTML = `
+<div class="info-box">
+  <p class="info-title">TRANSFER TARGET WALLET</p>
+  <p class="info-input">
+    <input type="text" class="input-txt" placeholder="Write to the transfer wallet." />
+  </p>
+  <button type="button" class="copy-btn"></button>
+</div>`
       }
-    })
-    const customHTML5 = `
-<div class="caution-wrap">
-  <div class="caution-content">
-    <p class="txt">
-      Would you like to disconnect your wallet?
-    </p>
+      const customHTML = `
+<div class="inventory-transfer-wrap">
+  <div class="transfer-head">
+  ${addressHeadHTML}
+  </div>
+  <div class="transfer-cotnent">
+    <div class="item-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9nu7n0E08-6IWTwb9DV6B2sCAjrEBNUTlA&s" alt="">
+    </div>
+    <div class="item-info">
+      <div class="info-box">
+        <p class="info-title">C4 WALLET ADDRESS</p>
+        <p class="info-desc">
+          <span class="txt">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</span>
+        </p>
+          <button type="button" class="copy-btn"></button>
+      </div>
+      <i class="ico-transfer-arrow"></i>
+    ${addressContentHTML}
+
+    </div>
+  </div>
+  <div class="transfer-foot">
+    <p class="txt">Do you agree to transfer this asset to the wallet?</p>
+    <!-- 없을때 error 클래스 value 에 추가 -->
+    <p class="txt small">Gas Fee: 0.0001 APT <span class="value">[ APT held: 0.05 APT ]</span> </p>
   </div>
 </div>
         `
-    confirmDialog5.open({
-      customHTML: customHTML5
+      each.addEventListener('click', () => {
+
+        dialog.open({
+          customHTML
+        })
+      })
+
     })
 
   </script>

@@ -14,14 +14,22 @@ no,카테고리명,Depth 1,Depth 2,Depth 3,Depth 4,Depth 5,화면경로,담당�
 13,메인,,로그인 후,WEB3,,,/pages/myasset.html,,,,
 14,메인,,,C4,,,/pages/myasset_c4.html,,,,
 15,메인,,마이인포,,,,/pages/myasset_myinfo.html,,,,
-16,추가,REWARD,,,,,/pages/cc_p01.html,,,,
-17,추가,CREATOR,,,,,/pages/cc_p02.html,,,,
-18,추가,JACPOT PUZZLE,,,,,/pages/cc_p03.html,,,,
-19,추가,MY ASSET,,,,,/pages/cc_p04.html,,,,
-20,추가,MY INFO,,,,,/pages/cc_p05.html,,,,
-21,추가,MAIN,,,,,/pages/cc_p06.html,,,,
-22,추가,STORE,list,,,,/pages/cc_p07.html,,,,
-23,추가,,detail,,,,/pages/cc_p08.html,,,,
-24,추가,,done,,,,/pages/cc_p09.html,,,,
-25,추가,,,,,,/pages/cc_p10.html,,,,
-,,,,,,,,,,,
+16,추가,REWARD,,,,,/pages/cc_p01.html,,,,5
+17,추가,CREATOR,,,,,/pages/cc_p02.html,,,,5
+18,추가,JACPOT PUZZLE,,,,,/pages/cc_p03.html,,,,5
+19,추가,MY ASSET - WEB3 INVENTORY,,,,,/pages/cc_p04.html,,,,1
+20,추가,,popup01,,,,/pages/cc_p04_01.html,,,,2
+21,추가,,popup02,,,,/pages/cc_p04_02.html,,,,
+22,추가,,popup03,,,,/pages/cc_p04_03.html,,,,
+23,추가,,popup04,,,,/pages/cc_p04_04.html,,,,
+24,추가,,popup05,,,,/pages/cc_p04_05.html,,,,
+25,추가,,popup06,,,,/pages/cc_p04_06.html,,,,
+26,추가,,popup07,,,,/pages/cc_p04_07.html,,,,
+27,추가,MY ASSET - KEYLESS,,,,,/pages/cc_p05.html,,,,
+28,추가,,popup01,,,,/pages/cc_p05_01.html,,,,
+29,추가,MY INFO,,,,,/pages/cc_p06.html,,,,
+30,추가,MAIN,,,,,,,,,
+31,추가,STORE,list,,,,/pages/cc_p07.html,,,,
+32,추가,,detail,,,,/pages/cc_p08.html,,,,
+33,추가,,done,,,,/pages/cc_p09.html,,,,
+34,추가,,,,,,/pages/cc_p10.html,,,,

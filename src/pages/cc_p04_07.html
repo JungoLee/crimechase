@@ -224,7 +224,6 @@
                     </div>
                   </li>
                   <li class="list">
-                  <li class="list">
                     <div class="item-box">
                       <div class="info-name-box">
                         <p class="tag-box public-txt red f-bar-bold f-12">#1234567890123456789012345678901234567890
@@ -232,7 +231,6 @@
                         <p class="public-txt f-15 f-bar-md">Sniper Badge</p>
                       </div>
                     </div>
-                  </li>
                   </li>
                   <li class="list">
                     <div class="item-box">
@@ -291,34 +289,6 @@
     })
 
 
-    const confirmDialog = setFn.dialog({
-      confirmText: 'OK',
-      cancelText: 'CANCEL',
-      classAdd: "caution",
-      confirm() {
-        confirmDialog.close()
-        dialog.close();
-      },
-      cancel() {
-        confirmDialog.close()
-      }
-    })
-    const customHTML = `
-<div class="caution-wrap">
-  <div class="caution-head">0x881abckdosdjslfae1a90x881abckdosdjslfae1a90x881abckdosdjslfae1a9</div>
-  <div class="caution-content">
-    <p class="txt">
-      Do you want to transfer NFT to the address?<br class="pc"/>
-      Assets transferred externally will be fully owned by the wallet owner.<br/>
-      Please check the correct wallet address.
-    </p>
-  </div>
-</div>
-        `
-    confirmDialog.open({
-      customHTML
-    })
-
 
     const confirmDialog4 = setFn.dialog({
       confirmText: 'OK',
@@ -346,32 +316,6 @@
     confirmDialog4.open({
       customHTML: customHTML4
     })
-
-    const confirmDialog5 = setFn.dialog({
-      confirmText: 'CONFIRM',
-      cancelText: 'CANCEL',
-      classAdd: "caution",
-      confirm() {
-        confirmDialog5.close()
-        dialog.close();
-      },
-      cancel() {
-        confirmDialog5.close()
-      }
-    })
-    const customHTML5 = `
-<div class="caution-wrap">
-  <div class="caution-content">
-    <p class="txt">
-      Would you like to disconnect your wallet?
-    </p>
-  </div>
-</div>
-        `
-    confirmDialog5.open({
-      customHTML: customHTML5
-    })
-
   </script>
 </body>
 

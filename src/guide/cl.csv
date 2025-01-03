@@ -31,6 +31,8 @@ no,카테고리명,Depth 1,Depth 2,Depth 3,Depth 4,Depth 5,화면경로,담당�
 30,추가,MAIN,,,,,/pages/cc_p07.html,,,,
 31,추가,,,,,,/pages/cc_p04_03.html,,,,
 32,추가,STORE,list,,,,/pages/cc_p08.html,,,,5
-33,추가,,detail,,,,/pages/cc_p09.html,,,,
-34,추가,,done,,,,/pages/cc_p10.html,,,,
-35,추가,,,,,,,,,,
+33,추가,,detail,,,,/pages/cc_p09.html,,,,5
+34,추가,,,popup01,,,/pages/cc_p09_01.html,,,,
+35,추가,,,popup02,,,/pages/cc_p09_02.html,,,,
+36,추가,,done,,,,/pages/cc_p10.html,,,,
+37,추가,,,,,,,,,,

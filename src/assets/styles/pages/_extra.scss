@@ -192,7 +192,7 @@
 .ico-apt-logo {
   @include rem(width, 30);
   @include rem(height, 30);
-  @include rem(background-size, 30 30);
+  background-size: cover;
   background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_363_5636)'%3E%3Cpath d='M23.2339 10.0375H20.58C20.2733 10.0375 19.9791 9.90662 19.7726 9.67595L18.696 8.46647C18.5333 8.28567 18.3079 8.17969 18.0638 8.17969C17.8197 8.17969 17.5944 8.28567 17.4317 8.46647L16.5053 9.50762C16.2049 9.84428 15.7667 10.0438 15.3161 10.0438H0.78865C0.375548 11.2096 0.106405 12.4503 0 13.7408H13.7137C13.9579 13.7408 14.1832 13.641 14.3522 13.4665L15.629 12.1385C15.7855 11.9702 16.0108 11.8767 16.2362 11.8767H16.2863C16.5304 11.8767 16.7557 11.9827 16.9184 12.1635L17.995 13.373C18.2015 13.6036 18.4957 13.7345 18.8024 13.7345H29.9937C29.8873 12.4503 29.6182 11.2034 29.2051 10.0313L23.2339 10.0375Z' fill='white'/%3E%3Cpath d='M8.2996 21.521C8.5437 21.521 8.76903 21.4212 8.93803 21.2467L10.2149 19.9187C10.3776 19.7504 10.5967 19.6569 10.8283 19.6569H10.8784C11.1225 19.6569 11.3541 19.7629 11.5105 19.9374L12.5871 21.1469C12.7937 21.3776 13.0878 21.5085 13.3945 21.5085H28.5667C29.1362 20.3364 29.5493 19.0833 29.7997 17.7679H15.2347C14.928 17.7679 14.6338 17.6369 14.4273 17.4063L13.3507 16.2093C13.188 16.0285 12.9626 15.9287 12.7185 15.9287C12.4744 15.9287 12.2428 16.0347 12.0864 16.2093L11.16 17.2504C10.8596 17.5933 10.4214 17.7866 9.96452 17.7866H0.206543C0.456908 19.102 0.870011 20.3551 1.43959 21.5272L8.2996 21.521Z' fill='white'/%3E%3Cpath d='M19.0589 5.99127C19.303 5.99127 19.5284 5.89152 19.6974 5.71696L20.9742 4.38903C21.1307 4.2207 21.356 4.12718 21.5876 4.12718H21.6377C21.8818 4.12718 22.1071 4.23317 22.2699 4.41397L23.3464 5.62968C23.553 5.86035 23.8472 5.99127 24.1539 5.99127H27.0393C24.2916 2.35037 19.9227 0 15.003 0C10.0833 0 5.70821 2.35037 2.96045 5.99127H19.0589Z' fill='white'/%3E%3Cpath d='M13.2694 25.2305H9.32618C9.01949 25.2305 8.72531 25.0996 8.51876 24.8689L7.44219 23.6595C7.27945 23.4787 7.05412 23.3789 6.81002 23.3789C6.56591 23.3789 6.33432 23.4849 6.17784 23.6595L5.25149 24.7006C4.95105 25.0435 4.51292 25.2368 4.056 25.2368H3.99341C6.74117 28.1669 10.6531 30.0061 15.0032 30.0061C19.3533 30.0061 23.259 28.1669 26.013 25.2368L13.2694 25.2305Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_363_5636'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 .ico-copy {
@@ -506,6 +506,14 @@
     }
   }
 }
+.inventory-transfer-wrap .transfer-head .f-bar-md {
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 .tooltip-detail {
   position: absolute;
   display: none;
@@ -541,5 +549,204 @@
   white-space: nowrap;
   .txt {
     display: inline-flex;
+  }
+}
+
+.insufficient-apt-btn-box {
+  position: absolute;
+  bottom: 12rem;
+  right: 0;
+  color: #ff0109;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  padding: 1rem 2rem;
+  border-radius: 5rem 0 0 5rem;
+  border: 1px solid #ff0109;
+  border-right: 0;
+  font-family: "Anton";
+  @media (max-width: 767px) {
+    bottom: 8rem;
+  }
+}
+
+.transfer-cotnent.upset-flex {
+  display: block;
+  border-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.transfer-cotnent.upset-flex .item-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 32.7rem;
+}
+
+.transfer-cotnent.upset-flex .item-column .value {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  color: #888888;
+}
+
+.transfer-cotnent.upset-flex .item-column .data {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  flex: 1;
+  margin-left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.transfer-cotnent.upset-flex .account-apt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #444;
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.transfer-cotnent.upset-flex .account-apt .result {
+  font-family: "Anton";
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.transfer-cotnent.upset-flex .balance-txt {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #888;
+}
+
+.transfer-cotnent.upset-flex .ico-transfer-arrow {
+  margin-left: -6rem;
+  margin-right: -6rem;
+  width: calc(100% + 12rem);
+}
+
+.transfer-cotnent.upset-flex .summary-box {
+  margin-top: 3rem;
+}
+
+.transfer-cotnent.upset-flex .summary-box .title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  text-align: left;
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+.transfer-cotnent.upset-flex .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.transfer-cotnent.upset-flex .summary-item .value {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.transfer-cotnent.upset-flex .summary-item .data {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  flex: 1;
+  margin-left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.transfer-cotnent.upset-flex .summary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.transfer-cotnent.upset-flex .gas-fee {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.transfer-cotnent.upset-flex .gas-fee {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.transfer-cotnent.upset-flex .free-event-badge {
+  @include rem(margin-top, 10);
+}
+
+@media (max-width: 767px) {
+  .transfer-cotnent.upset-flex {
+    padding: 0 2rem;
+  }
+
+  .transfer-cotnent.upset-flex .item-column {
+    max-width: 100%;
+  }
+
+  .transfer-cotnent.upset-flex .ico-transfer-arrow {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+  }
+}
+.pay-column .column-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.pay-column .column-box + .column-box {
+  margin-top: 2rem;
+}
+
+.pay-column .column-box .column {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.pay-column .column-box .column.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+.pay-column .column-box .column + .column {
+  margin-left: 2rem;
+  text-align: right;
+}
+
+.pay-column .column-box .ico-apt-logo {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+.pay-column.border-line {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding-top: 3.8rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .store-detail-container .pay-column.border-line {
+    margin-top: 4rem;
+    padding-top: 3rem;
   }
 }

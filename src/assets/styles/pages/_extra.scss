@@ -850,7 +850,12 @@
     color: #ffa134;
   }
 }
-
+.table-container {
+  .event-badge {
+    @include rem(vertical-align, -8);
+    @include rem(margin-left, 8);
+  }
+}
 .nft-container-page .important-notice-area {
   justify-content: center;
 }

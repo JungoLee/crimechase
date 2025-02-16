@@ -91,18 +91,13 @@
   "prettier.useTabs": false,
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "files.autoSave": "off",
-  "prettier.documentSelectors": [
-    "**/*.html",
-    "**/*.json",
-    "**/*.css",
-    "**/*.scss",
-    "**/*.js"
-  ],
+  "prettier.documentSelectors": ["**/*.html", "**/*.json", "**/*.css", "**/*.scss", "**/*.js"],
   "prettier.ignorePath": "./.prettierignore",
   "prettier.enable": true,
   "prettier.endOfLine": "lf",
   "editor.renderWhitespace": "all",
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "prettier.semi": true
+  "prettier.semi": true,
+  "bitoAI.codeCompletion.enableAutoCompletion": false
 }

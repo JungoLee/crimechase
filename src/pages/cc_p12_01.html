@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8" />
+  <title>Crime & Chase</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link href="../assets/styles/style.css" type="text/css" rel="stylesheet" />
+  <link href="../assets/styles/style2.css" type="text/css" rel="stylesheet" />
+  <style>
+    .btn-center {
+      text-align: center;
+      margin-top: 6rem;
+    }
+
+    .checkbox-content .txt.f-bar-md {
+      text-align: left;
+    }
+
+    .checkbox-content label {
+      align-items: flex-start;
+    }
+
+    @media (max-width: 767px) {}
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('pathPagesInclude/_header.html', {isLogin:true})
+
+    <div id="container">
+      <div id="content">
+        <div class="container-visual-area">
+          <div class="visual-area">
+            <div class="visual-img-box">
+              <img src="../assets/images/visual_bg_img07.jpg">
+            </div>
+            <div class="visual-txt">
+              <h2 class="title">
+                <span class="public-txt type02">ORDER</span>
+                <span class="public-txt ml-30">HISTORY</span>
+              </h2>
+            </div>
+            <!-- 라우트 이동할떄 setFn.visualText();  실행 필요 -->
+          </div>
+          <div class="breadcrunb-area">
+            <ul class="breadcrunb-list">
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">HOME</a>
+              </li>
+              <li class="breadcrunb-item">
+                <a href="" class="breadcrunb-link f-bar-bold">ORDER HISTORY</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-history-container-page done">
+          <div class="history-head">
+            LIST
+          </div>
+          <ul class="history-lists">
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+            <li class="list">
+              <div class="thumbnail-box">
+                <img src="">
+              </div>
+              <div class="history-info">
+                <div class="history-detail">
+                  <span class="sub-title">PURCHASE</span>
+                  <span class="title">350 GEM PACKAGE (3)</span>
+                </div>
+                <div class="history-date">2025-02-26</div>
+              </div>
+            </li>
+          </ul>
+          <div class="btn-center">
+            <button type="button" class="btn more-btn">
+              <span class="txt">MORE</span>
+              <i class="ico-arrow-down"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    @@include('pathPagesInclude/_footer.html')
+  </div>
+  <div class="dimm"></div>
+  <script src="../assets/script/lib/swiper-bundle.min.js"></script>
+  <script src="../assets/script/lib/gsap.js"></script>
+  <script src="../assets/script/common.js"></script>
+  <script>
+    const dialog = setFn.dialog({
+      confirmText: 'DELETE',
+      cancelText: 'NO',
+      confirm() {
+        // confirm 할떄 input check 되어있는지 벨리데이션 체크 하면 되지 않을까요?
+      },
+      cancel() {
+        dialog.close();
+      }
+    })
+    const customHTML = `
+<div class="inventory-transfer-wrap">
+  <div class="transfer-head">
+    <span class="txt">ACCOUNT DELETION NOTICE</span>
+  </div>
+
+  <p class="caution-txt">Please consider your decision carefully before proceeding with account deletion.</p>
+
+  <ul class="caution-lists">
+    <li>1. This account will be permanently deleted.</li>
+    <li>2. Once deleted, you will no longer be able to log in or use the services with this account.</li>
+    <li>3. All records associated with this account will be deleted and cannot be restored.</li>
+    <li>4. Account deletion is irreversible and takes effect immediately.</li>
+    <li>5. All items stored in My Asset > Wallet will be deleted and cannot be recovered after account deletion. Please withdraw and store important items in your personal wallet. </li>
+  </ul>
+
+  <div class="checkbox-content">
+    <label for="checkbox">
+      <input type="checkbox" id="checkbox">
+      <p class="txt f-bar-md">
+        I have fully understood the above information and acknowledge that my account cannot be recovered under any circumstances after deletion. I hereby give my final consent to proceed with the account deletion.
+      </p>
+    </label>
+  </div>
+</div>
+        `
+
+    dialog.open({
+      customHTML
+    })
+  </script>
+</body>
+
+</html>

@@ -859,3 +859,160 @@
 .nft-container-page .important-notice-area {
   justify-content: center;
 }
+
+.ico-ticket02 {
+  @include rem(width, 38);
+  @include rem(height, 38);
+  @include rem(background-size, 38);
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23FF0109'/%3E%3Cpath d='M18.2217 11.3664L5.97363 18.4378L8.07363 22.0751C8.7955 21.6584 9.6353 21.5142 10.4083 21.6742C11.1813 21.8343 11.8241 22.2855 12.1954 22.9286C12.5667 23.5717 12.6361 24.354 12.3882 25.1035C12.1403 25.8529 11.5955 26.5081 10.8736 26.9249L12.9736 30.5622L25.2217 23.4908L23.4717 20.4597L24.8326 19.674L26.5826 22.7051L32.0262 19.5622L29.9262 15.9249C29.2043 16.3417 28.3645 16.4859 27.5915 16.3258C26.8186 16.1658 26.1757 15.7146 25.8044 15.0714C25.4331 14.4283 25.3638 13.646 25.6116 12.8965C25.8595 12.1471 26.4043 11.4919 27.1262 11.0751L25.0262 7.43784L19.5826 10.5807L21.3326 13.6118L19.9717 14.3975L18.2217 11.3664ZM22.7717 19.2472L20.6717 15.6099L22.0326 14.8242L24.1326 18.4615L22.7717 19.2472Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+}
+.ico-refresh02 {
+  @include rem(width, 38);
+  @include rem(height, 38);
+  @include rem(background-size, 38);
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23FF0109'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M29.8209 18.9131L28.1603 17.1076L26.4837 15.3181C26.1778 14.9766 25.662 14.9766 25.3554 15.3181L23.6795 17.1076L22.0029 18.9131C21.6964 19.2385 21.8096 19.5151 22.2606 19.5151H22.6154H23.4537C23.4537 19.5799 23.4537 19.6287 23.4537 19.6936C23.3894 22.1826 22.2287 24.1189 20.5687 25.2903C18.2313 26.9328 14.9743 27.0464 12.5562 25.1273C17.6666 31.0328 28.4514 27.1773 28.4514 19.5151H29.2732H29.5633C30.0142 19.5151 30.1433 19.2385 29.8209 18.9131ZM14.3289 20.8815L16.0054 19.0921C16.3114 18.7506 16.1987 18.474 15.7313 18.474H15.377H14.5546C14.5546 18.4252 14.5546 18.3604 14.5546 18.3116C14.6035 15.8065 15.7802 13.8707 17.4402 12.7154C19.7617 11.0724 23.0346 10.9421 25.4527 12.8618C20.3423 6.97238 9.55745 10.8285 9.55745 18.474H8.73567H8.44507C7.97816 18.474 7.86441 18.7506 8.17151 19.0921L9.84805 20.8815L11.524 22.671C11.8306 23.013 12.3464 23.013 12.6523 22.671L14.3289 20.8815Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+}
+.ico-myinfo {
+  @include rem(width, 38);
+  @include rem(height, 38);
+  @include rem(background-size, 38);
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23FF0109'/%3E%3Cpath d='M27.9294 24.206L27.9272 24.1981C27.6151 22.9595 27.0947 21.8125 26.3803 20.7892C25.9443 20.1647 25.1711 19.7766 24.3624 19.7766C23.9785 19.7766 23.6018 19.8657 23.2729 20.0346C21.9964 20.6901 20.5187 21.0366 19 21.0366C17.4813 21.0366 16.0037 20.6901 14.7271 20.0346C14.3984 19.8659 14.0219 19.7766 13.6378 19.7766C12.8291 19.7766 12.0559 20.1645 11.6197 20.7892C10.9051 21.8129 10.3846 22.9607 10.0725 24.1998C9.97928 24.5093 9.97597 24.8371 10.0625 25.1483C10.1503 25.4637 10.3247 25.74 10.5665 25.9474C11.7029 26.9219 13.0147 27.6823 14.4652 28.2077C15.9169 28.7335 17.4426 29 19 29C20.5574 29 22.0831 28.7333 23.5348 28.2077C24.9853 27.6823 26.2971 26.9219 27.4335 25.9476C27.6755 25.7402 27.8497 25.4639 27.9375 25.1484C28.0235 24.8394 28.0207 24.5139 27.9294 24.2064V24.206Z' fill='%231B1B1B'/%3E%3Cpath d='M18.9992 9C16.162 9 13.8535 11.4172 13.8535 14.3882C13.8535 17.3592 16.162 19.7766 18.9992 19.7766C21.8365 19.7766 24.1451 17.3594 24.1451 14.3882C24.1451 11.417 21.8367 9 18.9992 9Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+}
+.ico-clip {
+  @include rem(width, 22);
+  @include rem(height, 22);
+  @include rem(background-size, 22);
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='10.25' fill='%2354AF3A' stroke='%231B1B1B' stroke-width='1.5'/%3E%3Cpath d='M10.2877 6.15165C11.0251 5.41426 12.0252 5 13.068 5C15.2396 5 17 6.76041 17 8.93198C17 9.97481 16.5858 10.9749 15.8484 11.7123L14.3106 13.25L13.25 12.1893L14.7877 10.6516C15.2438 10.1956 15.5 9.57698 15.5 8.93198C15.5 7.58884 14.4111 6.5 13.068 6.5C12.423 6.5 11.8044 6.75622 11.3484 7.21231L9.81066 8.75L8.75 7.68934L10.2877 6.15165Z' fill='%231B1B1B'/%3E%3Cpath d='M10.6516 14.7877L12.1893 13.25L13.25 14.3106L11.7123 15.8484C10.9749 16.5858 9.97481 17 8.93198 17C6.76041 17 5 15.2396 5 13.068C5 12.0252 5.41426 11.0251 6.15165 10.2877L7.68934 8.75L8.75 9.81066L7.21231 11.3484C6.75622 11.8044 6.5 12.423 6.5 13.068C6.5 14.4111 7.58884 15.5 8.93198 15.5C9.57698 15.5 10.1956 15.2438 10.6516 14.7877Z' fill='%231B1B1B'/%3E%3Cpath d='M9.28137 13.7803L13.7814 9.28033L12.7207 8.21967L8.2207 12.7197L9.28137 13.7803Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+}
+
+.my-ticket-container {
+  @include rem(margin-top, 40);
+  .ticket-list {
+    display: flex;
+    border: 1px solid #444444;
+    @include rem(border-radius, 5);
+    justify-content: space-between;
+    align-items: center;
+    @include rem(height, 48);
+    @include rem(padding, 0 20);
+    & + .ticket-list {
+      @include rem(margin-top, 10);
+    }
+  }
+  .ticket-name {
+    @include rem(margin-right, 48);
+    @include rem(font-size, 15);
+    font-family: "Anton";
+  }
+  .ticket-price {
+    @include rem(font-size, 15);
+  }
+}
+.order-history-container-page {
+  .history-head {
+    @include rem(width, 1240);
+    margin: 0 auto;
+    max-width: 100%;
+    @include rem(margin-top, 100);
+    border-bottom: 1px solid #444;
+    @include rem(padding-bottom, 15);
+    @include rem(padding-left, 30);
+    font-family: "Anton";
+    @include rem(font-size, 24);
+    color: #fff;
+    @media (max-width: 767px) {
+      @include rem(margin-top, 60);
+      max-width: calc(100% - 4rem);
+      @include rem(padding-left, 12);
+    }
+  }
+}
+.history-lists {
+  @include rem(width, 1240);
+  margin: 0 auto;
+  max-width: 100%;
+  @include rem(margin-top, 30);
+  @media (max-width: 767px) {
+    max-width: calc(100% - 4rem);
+  }
+  .thumbnail-box {
+    @include rem(width, 80);
+    @include rem(height, 80);
+    @include rem(border-radius, 10);
+    background-color: #1b1b1b;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .list {
+    background-color: #444;
+    @include rem(padding, 15 30);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @media (max-width: 767px) {
+      @include rem(padding, 12);
+      align-items: center;
+    }
+    & + .list {
+      @include rem(margin-top, 30);
+    }
+  }
+  .history-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include rem(margin-left, 30);
+    flex: 1 0 auto;
+    @media (max-width: 767px) {
+      @include rem(margin-left, 15);
+      position: relative;
+    }
+    .sub-title {
+      color: #888;
+      font-size: 1.7rem;
+      font-family: "Barlow", sans-serif;
+      font-weight: 500;
+      display: block;
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+      }
+    }
+    .title {
+      color: #fff;
+      font-family: "Anton";
+      @include rem(font-size, 26);
+      @include rem(margin-top, 12);
+      display: block;
+      @media (max-width: 767px) {
+        @include rem(font-size, 22);
+        line-height: 1.8rem;
+      }
+    }
+  }
+  .history-date {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    @media (max-width: 767px) {
+      position: absolute;
+      @include rem(top, 0);
+      @include rem(right, 0);
+      font-size: 1.5rem;
+    }
+  }
+}
